@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #262626;
+  color: #e5e5e5;
+  font-family: 'outfit';
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(264deg, #0a005d -5.09%, #3a8def 109.05%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

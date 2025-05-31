@@ -1,0 +1,178 @@
+.profil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+}
+
+.profil img {
+    width: 450px;
+    height: auto;
+    margin-top: 75px;
+
+}
+
+.profil h1 {
+    text-align: center;
+    width: 70%;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.profil h1 span {
+    font-size: 90px;
+    background: linear-gradient(270deg, #3a8def 35%, #ACD68B 50%, #F9BC2F 65%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profil p {
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.profil-action-bar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.profil-action-bar a {
+    text-decoration: none;
+    color: #e5e5e5;;
+    position: relative;
+    width: 150px;
+}
+
+.profil-boutton {
+    padding: 25px 45px;
+    border-radius: 50px;
+    border: 2px solid #e5e5e5;
+    cursor: pointer;
+    text-align: center;
+    transform: 1s;
+}
+
+.profil-boutton:hover {
+    scale: 1.05;
+    background: linear-gradient(264deg,#0a005d -5.09%, #3a8def 109.05%);
+    border: 2px solid rgb(130, 168, 238);
+}
+
+.bubble-toast {
+    position: absolute;
+    left: 120%;
+    top: -30px;
+    transform: translateX(-50%);
+    background: #3a8def;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 26px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    opacity: 0;
+    width: max-content;
+    max-width: 300px;
+    animation: bubbleIn 0.3s forwards, bubbleOut 0.5s 1.5s forwards;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes bubbleIn {
+to { opacity: 1; top: -60px; }
+}
+
+@keyframes bubbleOut {
+to { opacity: 0; top: -80px; }
+}
+
+.profil-stage-bubble {
+    position: absolute;
+    left: 1160px;
+    top: 100px;
+    background: #F9BC2F;
+    color: #23233a;
+    padding: 18px 28px;
+    border-radius: 32px 32px 32px 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    box-shadow: 0 4px 24px #0002;
+    z-index: 2;
+    animation: stage-bounce 4s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 260px;
+    max-width: 360px;
+    border: 2px solid #fff4;
+}
+
+@keyframes stage-bounce {
+    0%, 100% { transform: translateY(0);}
+    50% { transform: translateY(-12px);}
+}
+
+.profil-stage-bubble span {
+    font-size: 0.95em;
+    font-weight: 400;
+    margin-top: 4px;
+    color: #23233a;
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .profil img {
+        width: 180px;
+        margin-top: 30px;
+    }
+
+    .profil h1 {
+        width: 95%;
+        font-size: 28px;
+    }
+
+    .profil h1 span {
+        font-size: 38px;
+    }
+
+    .profil p {
+        width: 95%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .profil-action-bar {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .profil-boutton {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    .bubble-toast {
+        left: 50%;
+        top: -30px;
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .profil-stage-bubble {
+        left: 0;
+        top: 10px;
+        font-size: 0.95em;
+        padding: 10px 14px;
+        min-width: 0;
+        max-width: 90vw;
+    }
+}

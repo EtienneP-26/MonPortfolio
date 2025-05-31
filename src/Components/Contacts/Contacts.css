@@ -1,0 +1,123 @@
+.contact-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 60px auto;
+    background: #242424;
+    border-radius: 24px;
+    box-shadow: 0 4px 32px #0002;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title {
+    font-size: 38px;
+    margin-bottom: 18px;
+    color: #e5e5e5;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.contact-desc {
+    font-size: 20px;
+    color: #e5e5e5;
+    margin-bottom: 28px;
+    width: 120%;
+    text-align: center;
+}
+
+.contact-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background: #181818;
+    border-radius: 14px;
+    padding: 18px 24px;
+    box-shadow: 0 2px 12px #0003;
+    gap: 18px;
+    font-size: 1.15em;
+    position: relative; /* pour positionner la bulle */
+}
+
+.contact-icon {
+    font-size: 1.5em;
+    margin-right: 8px;
+}
+
+.contact-link {
+    color: #F9BC2F;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #3a8def;
+    text-decoration: underline;
+}
+
+.contact-copy-btn {
+    margin-left: auto;
+    background: #3a8def;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.contact-copy-btn:hover {
+    background: #F9BC2F;
+    color: #23233a;
+}
+
+.copied-bubble {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-150%) translateX(135%);
+    background: #3a8def;
+    color: #fff;
+    padding: 5px 16px;
+    border-radius: 16px;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #0003;
+    animation: fadeInOut 1.2s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-150%) translateX(135%) scale(0.9);}
+    20% { opacity: 1; transform: translateY(-150%) translateX(135%) scale(1);}
+    80% { opacity: 1; transform: translateY(-150%) translateX(135%) scale(1);}
+    100% { opacity: 0; transform: translateY(-150%) translateX(135%) scale(0.9);}
+}
+
+@media (max-width: 700px) {
+    .contact-container {
+        padding: 18px 2vw;
+        max-width: 98vw;
+    }
+    .contact-title {
+        font-size: 24px;
+    }
+    .contact-desc {
+        font-size: 15px;
+    }
+    .contact-item {
+        font-size: 1em;
+        padding: 12px 8px;
+    }
+}

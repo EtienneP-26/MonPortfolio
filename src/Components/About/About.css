@@ -1,0 +1,193 @@
+.about-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #242424;
+    border-radius: 24px;
+    box-shadow: 0 4px 32px #0002;
+    padding: 40px 20px;
+}
+
+.about-title {
+    font-size: 42px;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #e5e5e5;
+}
+
+.about-desc {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e5e5e5;
+}
+
+.about-section {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: #F9BC2F;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.about-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.about-logo-item {
+    flex: 0 0 22%;
+    max-width: 120px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #181818;
+    border-radius: 16px;
+    padding: 18px 24px;
+    box-shadow: 0 2px 12px #0003;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-logo-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 24px #F9BC2F;
+}
+
+.about-logo-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.about-logo-item span {
+    font-size: 18px;
+    color: #e5e5e5;
+    margin-top: 6px;
+}
+
+.about-softskill-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    cursor: pointer;
+    outline: none;
+    filter: brightness(1);
+    box-shadow: 0 2px 12px #0003;
+}
+
+.about-softskill-badge:hover, .about-softskill-badge:focus {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 4px 24px #F9BC2F, 0 0 0 3px #fff2;
+    filter: brightness(1.08);
+}
+
+.softskill-desc-popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30,30,40,0.45);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: popupFadeIn 0.2s;
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.softskill-desc-content {
+    position: relative;
+    background: linear-gradient(135deg, #23233a 80%, #F9BC2F55 100%);
+    border-radius: 22px;
+    padding: 38px 32px 28px 32px;
+    box-shadow: 0 8px 40px #F9BC2F, 0 2px 12px #0008;
+    color: #e5e5e5;
+    min-width: 260px;
+    max-width: 90vw;
+    text-align: center;
+    animation: popupIn 0.25s cubic-bezier(.77,0,.18,1);
+}
+
+@keyframes popupIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.softskill-desc-content h3 {
+    margin-bottom: 14px;
+    color: #F9BC2F;
+    font-size: 1.7em;
+}
+
+.softskill-desc-content p {
+    font-size: 1.15em;
+    margin-bottom: 0;
+}
+
+.softskill-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: #F9BC2F;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2;
+    line-height: 1;
+}
+
+.softskill-close-btn:hover {
+    color: #e5e5e5;
+}
+
+@media (max-width: 900px) {
+    .about-container {
+        padding: 18px 2vw;
+    }
+    .about-title {
+        font-size: 28px;
+    }
+    .about-desc {
+        font-size: 15px;
+    }
+    .about-section h2 {
+        font-size: 18px;
+    }
+    .about-logo-item {
+        flex-basis: 45%;
+        max-width: 80px;
+    }
+    .about-logo-item img {
+        width: 36px;
+        height: 36px;
+    }
+    .about-logo-item span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-logo-item {
+        flex-basis: 90%;
+        max-width: 300px;
+    }
+}
