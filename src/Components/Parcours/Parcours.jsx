@@ -5,7 +5,7 @@ const parcoursData = [
     {
         periode: "2024 - Actuellement",
         etablissement: "EPITECH Lille",
-        description: "Je viens de valider ma première année à EPITECH avec <u>74 crédits</u> sur 60 nécessaires.<br/>Durant cette année, j'ai acquis des compétences dans différents langages et l'utilisation d'outils lors de mes <u>65 projets</u> réalisés <u>seul ou en équipe</u> et validé le TEPitech (équivalent TOEIC) avec 870 points.", 
+        description: "Je viens de valider ma première année à EPITECH avec <u>74 crédits</u> sur 60 nécessaires.<br/>Durant cette année, j'ai acquis des compétences dans différents langages et l'utilisation d'outils lors de mes <u>65 projets</u> réalisés <u>seul ou en équipe</u> et ai validé le TEPitech (équivalent TOEIC) avec 870 points.", 
         color: "#F9BC2F"
     },
     {

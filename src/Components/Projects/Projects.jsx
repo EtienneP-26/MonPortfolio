@@ -27,7 +27,7 @@ const projects = [
         title: "MinIA",
         mediaType: "image",
         media: imgMinIA,
-        description: "Ce projet est un projet personnel qui a pour but de créer un Chat Bot simple grâce à l'Intelligence Artificielle. Coder en Python et sans utiliser de framework, ce projet m'aide à en apprendre plus sur le fonctionnement de l'IA.",
+        description: "Ce projet est un projet personnel qui a pour but de créer un Chat Bot simple grâce à l'Intelligence Artificielle. Codé en Python et sans utiliser de framework, ce projet m'aide à en apprendre plus sur le fonctionnement de l'IA.",
         techno: ["Python"],
         repo: "https://github.com/EtienneP-26/MinIA"
     },
@@ -51,7 +51,7 @@ const projects = [
         title: "mysh",
         mediaType: "image",
         media: imgmysh,
-        description: "Ce projet a été réalisé dans le cadre de ma première année à EPITECH. Il s'agit d'une invite de commande personnalisée, basé sur le tsch, développée en C. Il permet de comprendre le fonctionnement des shells Unix et de manipuler les processus, les entrées/sorties et les commandes système.",
+        description: "Ce projet a été réalisé dans le cadre de ma première année à EPITECH. Il s'agit d'une invite de commande personnalisée, basée sur le tsch, développée en C. Il permet de comprendre le fonctionnement des shells Unix et de manipuler les processus, les entrées/sorties et les commandes système.",
         techno: ["C", "Linux"],
         repo: "https://github.com/EtienneP-26/mysh"
     },

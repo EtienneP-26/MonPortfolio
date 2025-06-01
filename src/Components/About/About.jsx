@@ -49,8 +49,8 @@ const languagesSpoken = [
 const softSkills = [
   { name: 'Travail en équipe', color: '#3a8def', desc: "Plus de 30 Projets réalisés en équipe avec 11 collaborateurs differents." },
   { name: 'Communication', color: '#F9BC2F', desc: "Plus de 15 présentations de modules et projets" },
-  { name: 'Autonomie', color: '#ACD68B', desc: "Plus de 35 projets EPITECH fait seul et plusieurs projets personnels." },
-  { name: 'Créativité', color: '#e57373', desc: "Création de plusieurs logos pour mes differents projets et j'aime dessiner pendant mon temps libre." },
+  { name: 'Autonomie', color: '#ACD68B', desc: "Plus de 35 projets EPITECH réalisés seul et plusieurs projets personnels." },
+  { name: 'Créativité', color: '#e57373', desc: "Création de plusieurs logos pour mes différents projets et j'aime dessiner pendant mon temps libre." },
   { name: 'Adaptabilité', color: '#ba68c8', desc: "Savoir s’ajuster rapidement à de nouveaux contextes ou imprévus. Adapter l'organisation de mon travail et la communication avec mes différents partenaires de projets." },
 ]
 
