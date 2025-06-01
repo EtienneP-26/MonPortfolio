@@ -27,7 +27,7 @@ const projects = [
         title: "MinIA",
         mediaType: "image",
         media: imgMinIA,
-        description: "Ce projet est un projet personnel qui a pour but de créer un Chat Bot simple grace à l'Intelligence Artificielle. Coder en Python et sans utiliser de framework, ce projet m'aide à en apprendre plus sur le fonctionnement de l'IA.",
+        description: "Ce projet est un projet personnel qui a pour but de créer un Chat Bot simple grâce à l'Intelligence Artificielle. Coder en Python et sans utiliser de framework, ce projet m'aide à en apprendre plus sur le fonctionnement de l'IA.",
         techno: ["Python"],
         repo: "https://github.com/EtienneP-26/MinIA"
     },

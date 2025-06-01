@@ -16,7 +16,7 @@ const App = () => {
       <Projects />
       <Contacts />
       <footer>
-        <p>© 2023 Etienne POUILLE. Tous droits réservés.</p>
+        <p>© 2025 Etienne POUILLE. Tous droits réservés.</p>
       </footer>
     </div>
   )

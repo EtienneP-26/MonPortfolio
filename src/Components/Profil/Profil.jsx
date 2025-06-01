@@ -20,10 +20,10 @@ const Profil = () => {
         <span>Je suis disponible du 15 juillet <br/>au 15 décembre 2025</span>
       </div>
       <h1>Bonjour, je m'appelle<br/><span>Etienne POUILLE</span></h1>
-      <p>J'ai 18 ans, né le 20 juin 2006, et je suis situé dans le nord de la France.
-        <br/>Je suis un étudiant en informatique du programme grande écoles en 5 ans à EPITECH Lille.
+      <p>J'ai 18 ans, né le 20 juin 2006, et je réside dans le nord de la France.
+        <br/>Je suis un étudiant en informatique du programme grandes écoles en 5 ans à EPITECH Lille.
         <br/>Passionné par le développement web et logiciel, j'aime apprendre de nouvelles technologies et réaliser des projets.
-        <br/>Mes centres d'intérêt incluent le développement mais également
+        <br/>Mes centres d'intérêts incluent le développement mais également
         <br/>le sport (automobile, pratique de l'escalade et de la calisthenie), des sciences, la musique ou encore le dessin.   
       </p>
       <div className="profil-action-bar" style={{ position: 'relative' }}>
