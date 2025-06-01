@@ -165,14 +165,20 @@ to { opacity: 0; top: -80px; }
         top: -30px;
         font-size: 16px;
         padding: 6px 12px;
+        max-width: 90vw;
+        white-space: pre-line;
+        text-align: center;
     }
 
     .profil-stage-bubble {
-        left: 0;
+        left: 62%;
         top: 10px;
         font-size: 0.95em;
         padding: 10px 14px;
         min-width: 0;
         max-width: 90vw;
+        border-radius: 18px 18px 18px 0;
+        box-shadow: 0 2px 12px #0002;
+        align-items: flex-start;
     }
 }

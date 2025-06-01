@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1100px;
     margin: 40px auto 80px auto;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,8 +187,75 @@
 }
 
 @media (max-width: 500px) {
+    .about-container {
+        padding: 10px 2vw;
+        border-radius: 12px;
+    }
+
+    .about-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .about-desc {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .about-section h2 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
     .about-logo-item {
-        flex-basis: 90%;
-        max-width: 300px;
+        flex-basis: 100%;
+        max-width: 90vw;
+        min-width: 0;
+        padding: 10px 8px;
+        border-radius: 10px;
+        gap: 4px;
+    }
+
+    .about-logo-item img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .about-logo-item span {
+        font-size: 10px;
+    }
+
+    .softskill-desc-content {
+        padding: 18px 8px 14px 8px;
+        min-width: 0;
+        max-width: 96vw;
+        font-size: 0.95em;
+    }
+
+    .softskill-desc-content h3 {
+        font-size: 1.1em;
+    }
+
+    .softskill-desc-content p {
+        font-size: 0.95em;
+    }
+
+    .about-logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        justify-items: center;
+    }
+
+    .about-logo-item {
+        max-width: 100%;
+        min-width: 0;
+        width: 98%;
+        padding: 10px 4px;
+        border-radius: 10px;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -12,7 +12,7 @@
 }
 
 .contact-title {
-    font-size: 38px;
+    font-size: 42px;
     margin-bottom: 18px;
     color: #e5e5e5;
     text-align: center;
@@ -43,7 +43,7 @@
     box-shadow: 0 2px 12px #0003;
     gap: 18px;
     font-size: 1.15em;
-    position: relative; /* pour positionner la bulle */
+    position: relative;
 }
 
 .contact-icon {
@@ -105,7 +105,7 @@
     100% { opacity: 0; transform: translateY(-150%) translateX(135%) scale(0.9);}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .contact-container {
         padding: 18px 2vw;
         max-width: 98vw;
@@ -119,5 +119,60 @@
     .contact-item {
         font-size: 1em;
         padding: 12px 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-container {
+        padding: 10px 2vw;
+        border-radius: 12px;
+        margin: 10px auto 20px auto;
+    }
+
+    .contact-title {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .contact-desc {
+        font-size: 11px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .contact-list {
+        gap: 10px;
+    }
+
+    .contact-item {
+        font-size: 0.95em;
+        padding: 8px 4px;
+        border-radius: 8px;
+        gap: 8px;
+    }
+
+    .contact-icon {
+        font-size: 1.1em;
+        margin-right: 4px;
+    }
+
+    .contact-link {
+        font-size: 0.95em;
+        word-break: break-all;
+    }
+
+    .contact-copy-btn {
+        font-size: 1em;
+        padding: 4px 8px;
+        border-radius: 6px;
+    }
+
+    .copied-bubble {
+        right: 10px;
+        top: 0;
+        transform: translateY(-120%) translateX(0%);
+        font-size: 0.85em;
+        padding: 3px 8px;
+        border-radius: 10px;
     }
 }
