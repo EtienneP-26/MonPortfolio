@@ -21,10 +21,11 @@ const Profil = () => {
       </div>
       <h1>Bonjour, je m'appelle<br/><span>Etienne POUILLE</span></h1>
       <p>J'ai 18 ans, né le 20 juin 2006, et je réside dans le nord de la France.
-        <br/>Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille et je viens de validé ma première année avec les félicitations.
+        <br/>Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille
+        <br/>et je viens de valider ma première année avec les félicitations.
         <br/>Passionné par le développement web et logiciel, j'aime apprendre de nouvelles technologies et réaliser des projets.
         <br/>Mes centres d'intérêts incluent le développement mais également
-        <br/>le sport (automobile, pratique de l'escalade et de la calisthenie), des sciences, la musique ou encore le dessin.   
+        <br/>le sport (automobile, pratique de l'escalade et de la callisthénie), les sciences, la musique ou encore le dessin.   
       </p>
       <div className="profil-action-bar" style={{ position: 'relative' }}>
         <a className="profil-boutton" href='https://www.linkedin.com/in/etienne-pouille-8b7814349/' target="_blank" rel="noopener noreferrer">
