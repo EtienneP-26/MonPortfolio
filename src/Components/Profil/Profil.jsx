@@ -17,7 +17,7 @@ const Profil = () => {
       <div className="profil-stage-bubble">
         🚀 <strong>En recherche d'un stage informatique</strong>
         pour ma deuxième année à EPITECH
-        <span>Je suis disponible du 15 juillet <br/>au 15 décembre 2025</span>
+        <span>Je suis disponible de juillet <br/>à décembre 2025</span>
       </div>
       <h1>Bonjour, je m'appelle<br/><span>Etienne POUILLE</span></h1>
       <p>J'ai 18 ans, né le 20 juin 2006, et je réside dans le nord de la France.
