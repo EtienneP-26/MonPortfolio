@@ -1,51 +1,72 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import './Parcours.css'
+import { parcoursData } from '../../data/portfolio'
 
-const parcoursData = [
-    {
-        periode: "2024 - Actuellement",
-        etablissement: "EPITECH Lille",
-        description: "Je viens de valider ma première année à EPITECH avec <u>74 crédits</u> sur 60 nécessaires.<br/>Durant cette année, j'ai acquis des compétences dans différents langages et l'utilisation d'outils lors de mes <u>65 projets</u> réalisés <u>seul ou en équipe</u> et ai validé le TEPitech (équivalent TOEIC) avec 870 points.", 
-        color: "#F9BC2F"
-    },
-    {
-        periode: "2021 - 2024",
-        etablissement: "Lycée Notre Dame des Dunes, Dunkerque",
-        description: "<u>Baccalauréat section Européenne</u> obtenu avec mention bien. <br/><u>Spécialités</u>: NSI, Mathématiques.<br/><u>Options</u>: Mathématiques Expertes et Mathématiques en Anglais.<br/> Et pendant cette période j'ai obtenu les <u>diplômes de Cambridge</u> PET et FIRST.",
-        color: "#ACD68B"
-    },
-    {
-        periode: "2016 - 2021",
-        etablissement: "Collège Notre Dame, Wormhout",
-        description: "Brevet des collèges obtenu avec mention très bien.<br/>Je faisais également partie du club de robotique du collège.",
-        color: "#3a8def"
-    }
-]
+const cardVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.55, ease: 'easeOut' },
+  },
+}
 
 const Parcours = () => {
-    return (
-        <div className="parcours-container" id="parcours">
-            <h2 className="parcours-title">Mon Parcours</h2>
-            <div className="timeline">
-                <div className="timeline-line" />
-                {parcoursData.map((item, idx) => (
-                    <div
-                        className={`timeline-item ${idx % 2 === 1 ? 'right' : 'left'}`}
-                        key={idx}
-                    >
-                        <div className="timeline-dot" style={{ background: item.color, boxShadow: `0 0 0 4px ${item.color}55` }} />
-                        <div className="timeline-content" style={{ borderColor: item.color }}>
-                            <h3 style={{ color: item.color }}>{item.periode}</h3>
-                            <p>
-                                <strong>{item.etablissement}</strong><br />
-                                <span dangerouslySetInnerHTML={{ __html: item.description }} />
-                            </p>
-                        </div>
-                    </div>
-                ))}
-            </div>
+  return (
+    <section className="parcours-section" id="parcours">
+      <div className="parcours-inner">
+        <h2 className="section-title">Mon Parcours</h2>
+
+        <div className="timeline-container">
+          {/* Vertical line */}
+          <div className="timeline-line" />
+
+          {parcoursData.map((item, idx) => (
+            <motion.div
+              className="timeline-item"
+              key={item.id}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+            >
+              {/* Dot on the line */}
+              <div className="timeline-dot" />
+
+              {/* Card */}
+              <div className="timeline-card">
+                {/* Header */}
+                <div className="tc-header">
+                  <div className="tc-logo-wrap">
+                    <img src={item.logo} alt={item.imageplace} className="tc-logo" />
+                  </div>
+                  <div className="tc-meta">
+                    <span className="tc-date">{item.date}</span>
+                    <h3 className="tc-title">{item.title}</h3>
+                    {item.place && <span className="tc-place">{item.place}</span>}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p
+                  className="tc-desc"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                />
+
+                {/* Mini Bento: tags */}
+                <div className="tc-bento">
+                  {item.tags.map(tag => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-    )
+      </div>
+    </section>
+  )
 }
 
 export default Parcours

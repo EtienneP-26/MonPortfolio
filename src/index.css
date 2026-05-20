@@ -1,20 +1,203 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  height: 100vh;
-  background: #262626;
-  color: #e5e5e5;
-  font-family: 'outfit';
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
 }
 
 footer {
   width: 100%;
-  height: 50px;
-  background: linear-gradient(264deg, #0a005d -5.09%, #3a8def 109.05%);
+  padding: 1.5rem 0;
+  background: var(--surface-dark);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  opacity: 0.7;
+  letter-spacing: 0.03em;
+}
+
+/* ========== LAYOUT WITH SIDEBAR (RIGHT) ========== */
+.app-layout {
+  display: flex;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  margin-right: 64px;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    margin-right: 0;
+  }
+}
+
+/* ========== SECTION TITLES ========== */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ========== TAG PILL ========== */
+.tag {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-darkest);
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-accent);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ========== DESIGN TOKENS ========== */
+:root {
+  /* Backgrounds */
+  --bg:           #1B2922;
+  --bg-darkest:   #1C1C1C;
+  --surface-dark: #161e19;
+  --surface:      rgba(67, 81, 70, 0.25);
+  --surface-hover:rgba(67, 81, 70, 0.4);
+
+  /* Text */
+  --text:         #F1F1F1;
+  --text-muted:   rgba(241, 241, 241, 0.55);
+  --text-dim:     rgba(241, 241, 241, 0.35);
+
+  /* Accent (Vert Sauge) */
+  --accent:       #6b967e;
+  --accent-light: #7aab91;
+  --accent-dark:  #4A6958;
+
+  /* Brand greens */
+  --forest:       #4A6958;
+  --slate:        #435146;
+  --night:        #1B2922;
+  --anthracite:   #1C1C1C;
+  --pearl:        #F1F1F1;
+
+  /* Borders */
+  --border:       rgba(107, 150, 126, 0.15);
+  --border-hover: rgba(107, 150, 126, 0.4);
+
+  /* Shadows */
+  --shadow:       rgba(0, 0, 0, 0.35);
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --shadow-accent:rgba(107, 150, 126, 0.25);
+
+  /* Glass overlays */
+  --glass:        rgba(27, 41, 34, 0.75);
+  --glass-dark:   rgba(28, 28, 28, 0.85);
+  --overlay:      rgba(27, 41, 34, 0.5);
+
+  /* Misc */
+  --radius-sm:    8px;
+  --radius-md:    14px;
+  --radius-lg:    20px;
+  --radius-xl:    28px;
+}
+
+/* ========== LIGHT MODE ========== */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:           #F1F1F1;
+    --bg-darkest:   #FFFFFF;
+    --surface-dark: #e8e8e8;
+    --surface:      rgba(67, 81, 70, 0.08);
+    --surface-hover:rgba(67, 81, 70, 0.14);
+
+    --text:         #1B2922;
+    --text-muted:   rgba(27, 41, 34, 0.55);
+    --text-dim:     rgba(27, 41, 34, 0.35);
+
+    --accent:       #4A6958;
+    --accent-light: #6b967e;
+    --accent-dark:  #435146;
+
+    --border:       rgba(67, 81, 70, 0.12);
+    --border-hover: rgba(74, 105, 88, 0.4);
+
+    --shadow:       rgba(27, 41, 34, 0.1);
+    --shadow-light: rgba(27, 41, 34, 0.06);
+    --shadow-accent:rgba(74, 105, 88, 0.15);
+
+    --glass:        rgba(241, 241, 241, 0.8);
+    --glass-dark:   rgba(255, 255, 255, 0.9);
+    --overlay:      rgba(241, 241, 241, 0.6);
+  }
 }

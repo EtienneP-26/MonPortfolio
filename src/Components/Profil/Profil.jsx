@@ -1,54 +1,100 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { motion } from 'framer-motion'
 import './Profil.css'
-import profile_img from '../../assets/Profil.png'
-import CV from '../../assets/CV_Etienne_POUILLE.pdf'
+import { profileData } from '../../data/portfolio'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 32 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.12, ease: 'easeOut' },
+  }),
+}
 
 const Profil = () => {
-  const [showBubble, setShowBubble] = useState(false)
-
-  const handleDownload = () => {
-    setShowBubble(true)
-    setTimeout(() => setShowBubble(false), 3000)
-  }
-
   return (
-    <div className='profil' id='profil'>
-      <img src={profile_img} alt="" />
-      <div className="profil-stage-bubble">
-        🚀 <strong>En recherche d'un stage informatique</strong>
-        pour ma deuxième année à EPITECH
-        <span>Je suis disponible de juillet <br/>à décembre 2025</span>
-      </div>
-      <h1>Bonjour, je m'appelle<br/><span>Etienne POUILLE</span></h1>
-      <p>J'ai 18 ans, né le 20 juin 2006, et je réside dans le nord de la France.
-        <br/>Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille
-        <br/>et je viens de valider ma première année avec les félicitations.
-        <br/>Passionné par le développement web et logiciel, j'aime apprendre de nouvelles technologies et réaliser des projets.
-        <br/>Mes centres d'intérêts incluent le développement mais également
-        <br/>le sport (automobile, pratique de l'escalade et de la callisthénie), les sciences, la musique ou encore le dessin.   
-      </p>
-      <div className="profil-action-bar" style={{ position: 'relative' }}>
-        <a className="profil-boutton" href='https://www.linkedin.com/in/etienne-pouille-8b7814349/' target="_blank" rel="noopener noreferrer">
-            Mon LinkedIn
-        </a>
-        <a className="profil-boutton" href='https://github.com/EtienneP-26' target="_blank" rel="noopener noreferrer">
-          Mon Github
-        </a>
-        <a
-          className="profil-boutton"
-          href={CV}
-          download="CV Etienne POUILLE.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleDownload}
+    <section className="hero-section" id="profil">
+      <div className="hero-content">
+
+        {/* Photo */}
+        <motion.div
+          className="image-container"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0}
         >
-          Mon CV
-          {showBubble && (
-            <span className="bubble-toast">CV téléchargé !</span>
-          )}
-        </a>
+          <img src={profileData.photo} alt="Etienne Pouille" className="profile-pic" />
+          <div className="glow-effect" />
+        </motion.div>
+
+        {/* Nom */}
+        <motion.h1
+          className="hero-title"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={1}
+        >
+          <span className="gradient-text">{profileData.name}</span>
+        </motion.h1>
+
+        {/* Sous-titre */}
+        <motion.h2
+          className="hero-subtitle"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={2}
+        >
+          {profileData.subtitle}
+        </motion.h2>
+
+        {/* Bio */}
+        <motion.p
+          className="hero-bio"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={3}
+        >
+          {profileData.bio.split('\n').map((line, i) => (
+            <React.Fragment key={i}>{line}{i < profileData.bio.split('\n').length - 1 && <br />}</React.Fragment>
+          ))}
+        </motion.p>
+
+        {/* Status bar */}
+        <motion.div
+          className="status-bar"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={4}
+        >
+          {profileData.statuses.map((s, i) => (
+            <React.Fragment key={i}>
+              {i > 0 && <div className="status-divider" />}
+              <div className="status-item">
+                <span className="status-icon">
+                  {s.icon === 'active-dot' ? (
+                    <span className="status-dot-active" />
+                  ) : (
+                    s.icon
+                  )}
+                </span>
+                <div className="status-text">
+                  <strong>{s.title}</strong>
+                  <span>{s.subtitle}</span>
+                </div>
+              </div>
+            </React.Fragment>
+          ))}
+        </motion.div>
+
+
       </div>
-    </div>
+    </section>
   )
 }
 
