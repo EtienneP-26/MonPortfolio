@@ -63,6 +63,11 @@ le sport (automobile, pratique de l'escalade et de la callisthénie), les scienc
   statuses: [
     {
       icon: 'active-dot',
+      title: 'Remplacement juillet-août',
+      subtitle: 'Je suis disponible pour les remplacements en entreprise de juillet-août 2026.',
+    },
+    {
+      icon: 'active-dot',
       title: 'Freelance',
       subtitle: 'Je suis ouvert aux missions de développement en Freelance sur mon temps libre.',
     },
