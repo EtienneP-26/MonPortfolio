@@ -237,11 +237,11 @@ export const projectsData = [
     repo: null,
   },
   {
-    title: 'MinIA',
-    image: imgMinIA,
-    description: "Chatbot IA développé en Python pur (sans framework ML). Implémentation de réseaux de neurones from scratch.",
-    tags: ['Python', 'AI', 'Maths'],
-    repo: 'https://github.com/EtienneP-26/MinIA',
+    title: 'ALF',
+    image: null,
+    description: "CLI Agentique, style Claude Code avec les APIs Ollama et donc gratuites.",
+    tags: ['IA', 'Python', 'API'],
+    repo: null,
   },
   {
     title: 'My DOOM',
@@ -256,6 +256,13 @@ export const projectsData = [
     description: "Interface moderne React/Vite avec design 'Bento Grid'. Vitrine de mes compétences et projets.",
     tags: ['React', 'CSS3', 'Vite'],
     repo: null,
+  },
+  {
+    title: 'MinIA - En Attente',
+    image: imgMinIA,
+    description: "Chatbot IA développé en Python pur (sans framework ML). Implémentation de réseaux de neurones from scratch.",
+    tags: ['Python', 'AI', 'Maths'],
+    repo: 'https://github.com/EtienneP-26/MinIA',
   },
   {
     title: 'MySH',
