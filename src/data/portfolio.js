@@ -82,7 +82,7 @@ export const stagesData = [
     id: 'parttime',
     type: 'Stage Temps Partiel',
     badge: '2 jours / semaine',
-    period: 'Septembre 2026 → Fin février 2027',
+    period: 'Mi-Septembre 2026 → Fin février 2027',
     duration: '6 mois',
     context: [
       "Durant ma 3ème année à EPITECH, je serai à l'école 3 jours (lundi, mardi, mercredi) et en entreprise 2 jours par semaine (jeudi, vendredi).",
@@ -92,7 +92,7 @@ export const stagesData = [
       { label: 'Domaine', value: 'IA / DevOps / Développement logiciel / Automatisation' },
       { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours)' },
       { label: 'Rythme', value: '3 jours école / 2 jours en entreprise (jeudi, vendredi)' },
-      { label: 'Disponibilité', value: 'Dès septembre 2026' },
+      { label: 'Disponibilité', value: 'Dès mi-septembre 2026' },
     ],
     color: 'sage',
   },
