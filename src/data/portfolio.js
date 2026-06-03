@@ -236,7 +236,7 @@ export const projectsData = [
   {
     title: 'RoboCar - N4S',
     image: imgrobocar,
-    description: "Création d'une voiture autonome sur une base de voiture télécommandée sur un circuit avec des lignes blanches. Quatre de mes camarades et moi sommes l'équipe representant le campus de Lille sur la competition national EPITECH.",
+    description: "Création d'une voiture autonome sur une base de voiture télécommandée sur un circuit avec des lignes blanches. Nous sommes l'équipe représentant le campus de Lille sur la competition national EPITECH.",
     tags: ['IA', 'Python', 'Câblage', 'Robotique'],
     repo: null,
   },
