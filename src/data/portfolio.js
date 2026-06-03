@@ -41,6 +41,10 @@ import imgmyDoom from '../assets/projects/MYDOOM.png'
 import imgmonportfolio from '../assets/projects/MonPortfolio.png'
 import imgmysh from '../assets/projects/mysh.png'
 import imgrobocar from '../assets/projects/RoboCar.jpg'
+import imgstarttrek from '../assets/projects/starttrek.png'
+import imgcvrie from '../assets/projects/cvrie.png'
+import imgalf from '../assets/projects/ALF.png'
+// import imgmymarvin from '../assets/projects/myma.png'
 
 // ============================================================
 //  SECTION PROFIL
@@ -232,15 +236,43 @@ export const projectsData = [
   {
     title: 'RoboCar - N4S',
     image: imgrobocar,
-    description: "Création d'une voiture autonome sur une base de voiture télécommandée sur un circuit avec des lignes blanches.",
+    description: "Création d'une voiture autonome sur une base de voiture télécommandée sur un circuit avec des lignes blanches. Quatre de mes camarades et moi sommes l'équipe representant le campus de Lille sur la competition national EPITECH.",
     tags: ['IA', 'Python', 'Câblage', 'Robotique'],
     repo: null,
   },
   {
-    title: 'ALF',
-    image: null,
+    title: 'ALF - En cours',
+    image: imgalf,
     description: "CLI Agentique, style Claude Code avec les APIs Ollama et donc gratuites.",
     tags: ['IA', 'Python', 'API'],
+    repo: null,
+  },
+  {
+    title: 'StartTrek',
+    image: imgstarttrek,
+    description: "Projet EPITECH : Apprendre à un module spaciale à alunir en faisant du reinforcement learning.",
+    tags: ['IA', 'Python', 'Reinforcement Learning'],
+    repo: null,
+  },
+  {
+    title: 'CVRIE',
+    image: imgcvrie,
+    description: "Projet EPITECH : Détection de tumeurs cérébrales à partir d’images et Natural Language Processing.",
+    tags: ['IA', 'Python', 'Supervised', 'Unsupervised'],
+    repo: null,
+  },
+  // {
+  //   title: 'MyMarvin',
+  //   image: imgmymarvin,
+  //   description: "Projet EPITECH : Tests automatisés à l’aide de Jenkins",
+  //   tags: ['Jenkins', 'DevOps', 'Automatisation'],
+  //   repo: null,
+  // },
+  {
+    title: 'Mon Portfolio',
+    image: imgmonportfolio,
+    description: "Interface moderne React/Vite avec design 'Bento Grid'. Vitrine de mes compétences et projets.",
+    tags: ['React', 'CSS3', 'Vite'],
     repo: null,
   },
   {
@@ -249,13 +281,6 @@ export const projectsData = [
     description: "Moteur de jeu type Raycasting (Doom-like) écrit en C avec CSFML. Gestion de textures, physique et son.",
     tags: ['C', 'CSFML', 'Game Engine'],
     repo: 'https://github.com/EtienneP-26/My-DOOM-FPS',
-  },
-  {
-    title: 'Mon Portfolio',
-    image: imgmonportfolio,
-    description: "Interface moderne React/Vite avec design 'Bento Grid'. Vitrine de mes compétences et projets.",
-    tags: ['React', 'CSS3', 'Vite'],
-    repo: null,
   },
   {
     title: 'MinIA - En Attente',
@@ -267,7 +292,7 @@ export const projectsData = [
   {
     title: 'MySH',
     image: imgmysh,
-    description: "Recréation d'un Shell Unix en C (basé sur tcsh). Gestion des processus, pipes, redirections et signaux.",
+    description: "Projet EPITECH : Recréation d'un Shell Unix en C (basé sur tcsh). Gestion des processus, pipes, redirections et signaux.",
     tags: ['C', 'Unix', 'System'],
     repo: 'https://github.com/EtienneP-26/mysh',
   },
