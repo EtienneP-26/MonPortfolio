@@ -235,10 +235,17 @@ export const projectsData = [
     repo: null,
   },
   {
-    title: 'ALF - En cours',
+    title: 'ALF-CLI - En cours',
     image: imgalf,
-    description: "Application web auto-hebergé utilisant des API Ollama gratuites.",
+    description: "CLI agentique (comme claude code) utilisant des API Ollama gratuites.",
     tags: ['IA', 'Python', 'API'],
+    repo: null,
+  },
+  {
+    title: 'Tri d\'emails automatisé',
+    image: imgalf,
+    description: "Rangement de mes mails pro automatiquement avec n8n et une API Ollama de Gemma4.",
+    tags: ['n8n', 'IA', 'Automatisation', 'API'],
     repo: null,
   },
   {
