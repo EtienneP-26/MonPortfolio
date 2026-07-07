@@ -67,11 +67,6 @@ le sport (automobile, pratique de l'escalade et de la callisthénie), les scienc
   statuses: [
     {
       icon: 'active-dot',
-      title: 'Remplacement juillet-août',
-      subtitle: 'Je suis disponible pour les remplacements en entreprise de juillet-août 2026.',
-    },
-    {
-      icon: 'active-dot',
       title: 'Freelance',
       subtitle: 'Je suis ouvert aux missions de développement en Freelance sur mon temps libre.',
     },
@@ -86,17 +81,16 @@ export const stagesData = [
     id: 'parttime',
     type: 'Stage Temps Partiel',
     badge: '2 jours / semaine',
-    period: 'Mi-Septembre 2026 → Fin février 2027',
+    period: '17 septembre 2026 → 26 février 2027',
     duration: '6 mois',
     context: [
-      "Durant ma 3ème année à EPITECH, je serai à l'école 3 jours (lundi, mardi, mercredi) et en entreprise 2 jours par semaine (jeudi, vendredi).",
-      "Ce rythme est idéal pour une montée en compétences progressive tout en continuant ma formation.",
+      ""
     ],
     details: [
       { label: 'Domaine', value: 'IA / DevOps / Développement logiciel / Automatisation' },
       { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours)' },
-      { label: 'Rythme', value: '3 jours école / 2 jours en entreprise (jeudi, vendredi)' },
-      { label: 'Disponibilité', value: 'Dès mi-septembre 2026' },
+      { label: 'Rythme', value: '3 jours école / 2 jours en entreprise (jeudi et vendredi)' },
+      { label: 'Type de contrat', value: 'Stage / CDD / CDI' },
     ],
     color: 'sage',
   },
@@ -104,8 +98,8 @@ export const stagesData = [
     id: 'fulltime',
     type: 'Stage Plein Temps',
     badge: '5 jours/semaine',
-    period: 'Avril 2027 → Août 2027',
-    duration: '~5 mois',
+    period: '29 mars 2027 → 27 août 2027',
+    duration: '4-5 mois',
     context: [
       "En fin de 3ème année, je serai disponible à temps plein pour un stage conventionnel.",
       "Cette période correspond à une immersion complète en entreprise, idéale pour un projet ambitieux et une réelle intégration dans les équipes.",
@@ -113,8 +107,8 @@ export const stagesData = [
     details: [
       { label: 'Domaine', value: 'IA / DevOps / Développement logiciel / Automatisation' },
       { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours)' },
-      { label: 'Rythme', value: '5 jours/semaine — temps plein' },
-      { label: 'Disponibilité', value: 'Début avril 2027' },
+      { label: 'Rythme', value: '5 jours/semaine - temps plein' },
+      { label: 'Type de contrat', value: 'Stage / CDD / CDI' },
     ],
     color: 'forest',
   },
@@ -243,7 +237,7 @@ export const projectsData = [
   {
     title: 'ALF - En cours',
     image: imgalf,
-    description: "CLI Agentique, style Claude Code avec les APIs Ollama et donc gratuites.",
+    description: "Application web auto-hebergé utilisant des API Ollama gratuites.",
     tags: ['IA', 'Python', 'API'],
     repo: null,
   },
