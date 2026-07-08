@@ -44,6 +44,7 @@ import imgrobocar from '../assets/projects/RoboCar.jpg'
 import imgstarttrek from '../assets/projects/starttrek.png'
 import imgcvrie from '../assets/projects/cvrie.png'
 import imgalf from '../assets/projects/ALF.png'
+import imgAutoMail from '../assets/projects/autoMail.png'
 // import imgmymarvin from '../assets/projects/myma.png'
 
 // ============================================================
@@ -243,7 +244,7 @@ export const projectsData = [
   },
   {
     title: 'Tri d\'emails automatisé',
-    image: imgalf,
+    image: imgAutoMail,
     description: "Rangement de mes mails pro automatiquement avec n8n et une API Ollama de Gemma4.",
     tags: ['n8n', 'IA', 'Automatisation', 'API'],
     repo: null,
