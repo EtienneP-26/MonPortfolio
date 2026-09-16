@@ -37,14 +37,13 @@ const About = () => {
                 <div key={i} className={`bento-logo-item${lang.learning ? ' learning' : ''}`}>
                   <img src={lang.img} alt={lang.name} />
                   <span>{lang.name}</span>
-                  {lang.level && <span className="skill-level">{lang.level}</span>}
                   {lang.learning && <span className="skill-badge">En apprentissage</span>}
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Carte 2 — Langues */}
+          {/* Carte 2 — Outils */}
           <motion.div
             className="bento-card"
             variants={fadeIn}
@@ -53,16 +52,14 @@ const About = () => {
             viewport={{ once: true, margin: '-60px' }}
           >
             <h3 className="bento-card-title">
-              <span className="bento-icon"></span> Langues
+              <span className="bento-icon"></span> Outils & Technologies
             </h3>
-            <div className="bento-languages">
-              {skillsData.langues.map((lang, i) => (
-                <div key={i} className="bento-language-item">
-                  <img src={lang.img} alt={lang.name} className="flag-img" />
-                  <div className="language-info">
-                    <span className="language-name">{lang.name}</span>
-                    {/* <span className="language-level">{lang.level}</span>*/}
-                  </div>
+            <div className="bento-logo-grid">
+              {skillsData.outils.map((tool, i) => (
+                <div key={i} className={`bento-logo-item${tool.learning ? ' learning' : ''}`}>
+                  <img src={tool.img} alt={tool.name} />
+                  <span>{tool.name}</span>
+                  {tool.learning && <span className="skill-badge">En apprentissage</span>}
                 </div>
               ))}
             </div>
@@ -89,7 +86,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Carte 4 — Outils (full width) */}
+          {/* Carte 4 — Langues (full width) */}
           <motion.div
             className="bento-card bento-full"
             variants={fadeIn}
@@ -98,15 +95,15 @@ const About = () => {
             viewport={{ once: true, margin: '-60px' }}
           >
             <h3 className="bento-card-title">
-              <span className="bento-icon"></span> Outils & Technologies
+              <span className="bento-icon"></span> Langues
             </h3>
-            <div className="bento-logo-grid bento-logo-grid-large">
-              {skillsData.outils.map((tool, i) => (
-                <div key={i} className={`bento-logo-item${tool.learning ? ' learning' : ''}`}>
-                  <img src={tool.img} alt={tool.name} />
-                  <span>{tool.name}</span>
-                  {tool.level && <span className="skill-level">{tool.level}</span>}
-                  {tool.learning && <span className="skill-badge">En apprentissage</span>}
+            <div className="bento-languages">
+              {skillsData.langues.map((lang, i) => (
+                <div key={i} className="bento-language-item">
+                  <img src={lang.img} alt={lang.name} className="flag-img" />
+                  <div className="language-info">
+                    <span className="language-name">{lang.name}</span>
+                  </div>
                 </div>
               ))}
             </div>
