@@ -1,7 +1,14 @@
 import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import './Projects.css'
-import { projectsData } from '../../data/portfolio'
+import { projectsData, roadmapData } from '../../data/portfolio'
+
+const statusClass = {
+  'en-cours': 'status-en-cours',
+  'termine': 'status-termine',
+  'en-exploration': 'status-en-exploration',
+  'perso': 'status-perso',
+}
 
 const Projects = () => {
   const sliderRef = useRef(null)
@@ -38,6 +45,11 @@ const Projects = () => {
                 {/* Image */}
                 <div className="pc-image">
                   <img src={project.image} alt={project.title} />
+                  {project.statusLabel && (
+                    <span className={`pc-status ${statusClass[project.status] || ''}`}>
+                      {project.statusLabel}
+                    </span>
+                  )}
                 </div>
 
                 {/* Content */}
@@ -73,6 +85,17 @@ const Projects = () => {
             </svg>
           </button>
         </div>
+
+        {roadmapData?.length > 0 && (
+          <div className="roadmap">
+            <h3 className="roadmap-title">Prochainement</h3>
+            <div className="roadmap-list">
+              {roadmapData.map((item, i) => (
+                <span key={i} className="roadmap-item">🔹 {item}</span>
+              ))}
+            </div>
+          </div>
+        )}
       </motion.div>
     </section>
   )

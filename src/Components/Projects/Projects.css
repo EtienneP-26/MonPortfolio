@@ -83,6 +83,7 @@
 
 /* Image area */
 .pc-image {
+  position: relative;
   width: 100%;
   height: 170px;
   overflow: hidden;
@@ -94,6 +95,36 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+}
+
+/* Status badge (top-right corner of the image) */
+.pc-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.pc-status.status-en-cours {
+  background: rgba(217, 164, 6, 0.85);
+}
+
+.pc-status.status-termine {
+  background: rgba(107, 150, 126, 0.9);
+}
+
+.pc-status.status-en-exploration {
+  background: rgba(107, 120, 200, 0.85);
+}
+
+.pc-status.status-perso {
+  background: rgba(90, 90, 90, 0.85);
 }
 
 .project-card:hover .pc-image img {
@@ -134,6 +165,37 @@
   justify-content: center;
   font-size: 0.85rem;
   padding: 8px 16px;
+}
+
+/* Roadmap / "Prochainement" */
+.roadmap {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.roadmap-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.roadmap-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.roadmap-item {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
 }
 
 /* Responsive */

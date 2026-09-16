@@ -106,6 +106,32 @@
   letter-spacing: 0.02em;
 }
 
+.bento-logo-item.learning {
+  opacity: 0.55;
+  filter: grayscale(70%);
+}
+
+.bento-logo-item.learning:hover {
+  opacity: 0.85;
+}
+
+.skill-level {
+  font-size: 0.62rem !important;
+  font-weight: 500 !important;
+  color: var(--accent) !important;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.skill-badge {
+  font-size: 0.6rem !important;
+  font-weight: 500 !important;
+  font-style: italic;
+  color: var(--text-muted) !important;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 /* ── Langues ── */
 .bento-languages {
   display: flex;
