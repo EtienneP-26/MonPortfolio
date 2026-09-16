@@ -74,6 +74,7 @@
 }
 
 .bento-logo-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,27 +117,22 @@
   opacity: 0.85;
 }
 
-.skill-level {
-  font-size: 0.62rem !important;
-  font-weight: 500 !important;
-  color: var(--accent) !important;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
 .skill-badge {
-  font-size: 0.6rem !important;
-  font-weight: 500 !important;
-  font-style: italic;
-  color: var(--text-muted) !important;
-  text-transform: none;
-  letter-spacing: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: help;
 }
 
 /* ── Langues ── */
 .bento-languages {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.75rem;
 }
 
@@ -149,6 +145,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   transition: all 0.2s;
+  flex: 1 1 220px;
 }
 
 .bento-language-item:hover {
@@ -165,20 +162,24 @@
 
 .language-info {
   display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .language-name {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text);
+  white-space: nowrap;
 }
 
 .language-level {
   font-size: 0.75rem;
   color: var(--accent);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 /* ── Soft Skills ── */
