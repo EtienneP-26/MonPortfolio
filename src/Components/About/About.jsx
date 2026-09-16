@@ -34,8 +34,8 @@ const About = () => {
             </h3>
             <div className="bento-logo-grid">
               {skillsData.langages.map((lang, i) => (
-                <div key={i} className={`bento-logo-item${lang.learning ? ' learning' : ''}`}>
-                  {lang.learning && <span className="skill-badge" title="En apprentissage" />}
+                <div key={i} className={`bento-logo-item${lang.learning ? ' learning' : ''}`} title={lang.learning ? 'En apprentissage' : undefined}>
+                  {lang.learning && <span className="skill-badge" />}
                   <img src={lang.img} alt={lang.name} />
                   <span>{lang.name}</span>
                 </div>
@@ -56,8 +56,8 @@ const About = () => {
             </h3>
             <div className="bento-logo-grid">
               {skillsData.outils.map((tool, i) => (
-                <div key={i} className={`bento-logo-item${tool.learning ? ' learning' : ''}`}>
-                  {tool.learning && <span className="skill-badge" title="En apprentissage" />}
+                <div key={i} className={`bento-logo-item${tool.learning ? ' learning' : ''}`} title={tool.learning ? 'En apprentissage' : undefined}>
+                  {tool.learning && <span className="skill-badge" />}
                   <img src={tool.img} alt={tool.name} />
                   <span>{tool.name}</span>
                 </div>
