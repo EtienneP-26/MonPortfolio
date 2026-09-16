@@ -29,6 +29,12 @@ import htmlLogo from '../assets/logos/html.png'
 import cssLogo from '../assets/logos/css.png'
 import sfmlLogo from '../assets/logos/sfml.png'
 import canvaLogo from '../assets/logos/canva.png'
+import kubernetesLogo from '../assets/logos/kubernetes.png'
+import terraformLogo from '../assets/logos/terraform.png'
+import sshLogo from '../assets/logos/ssh.png'
+import ollamaLogo from '../assets/logos/ollama.png'
+import claudeCodeLogo from '../assets/logos/claude-code.png'
+import tailscaleLogo from '../assets/logos/tailscale.png'
 
 // --- Assets : Drapeaux ---
 import frFlag from '../assets/flags/fr.jpeg'
@@ -45,6 +51,8 @@ import imgstarttrek from '../assets/projects/starttrek.png'
 import imgcvrie from '../assets/projects/cvrie.png'
 import imgalf from '../assets/projects/ALF.png'
 import imgAutoMail from '../assets/projects/autoMail.png'
+import imgprojecttemplate from '../assets/projects/project-template.png'
+// import imgpytorch from '../assets/projects/pytorch-from-scratch.png'
 // import imgmymarvin from '../assets/projects/myma.png'
 
 // ============================================================
@@ -54,7 +62,7 @@ export const profileData = {
   name: 'Etienne POUILLE',
   photo: profileImg,
   cv: CV,
-  subtitle: 'Étudiant EPITECH — 2ème Année',
+  subtitle: 'Étudiant EPITECH — 3ème Année',
   bio: `J'ai 19 ans, né le 20 juin 2006, et je réside dans le nord de la France.
 Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille
 et je viens de valider ma première année avec les félicitations.
@@ -79,25 +87,8 @@ le sport (automobile, pratique de l'escalade et de la callisthénie), les scienc
 // ============================================================
 export const stagesData = [
   {
-    id: 'parttime',
-    type: 'Stage Temps Partiel',
-    badge: '2 jours / semaine',
-    period: '17 septembre 2026 → 26 février 2027',
-    duration: '6 mois',
-    context: [
-      ""
-    ],
-    details: [
-      { label: 'Domaine', value: 'IA / DevOps / Développement logiciel / Automatisation' },
-      { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours)' },
-      { label: 'Rythme', value: '3 jours école / 2 jours en entreprise (jeudi et vendredi)' },
-      { label: 'Type de contrat', value: 'Stage / CDD / CDI' },
-    ],
-    color: 'sage',
-  },
-  {
     id: 'fulltime',
-    type: 'Stage Plein Temps',
+    type: 'Stage Temps Plein',
     badge: '5 jours/semaine',
     period: '29 mars 2027 → 27 août 2027',
     duration: '4-5 mois',
@@ -106,8 +97,8 @@ export const stagesData = [
       "Cette période correspond à une immersion complète en entreprise, idéale pour un projet ambitieux et une réelle intégration dans les équipes.",
     ],
     details: [
-      { label: 'Domaine', value: 'IA / DevOps / Développement logiciel / Automatisation' },
-      { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours)' },
+      { label: 'Domaine', value: 'DevOps, MLOps, IA, Edge AI' },
+      { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours) — télétravail toléré' },
       { label: 'Rythme', value: '5 jours/semaine - temps plein' },
       { label: 'Type de contrat', value: 'Stage / CDD / CDI' },
     ],
@@ -120,13 +111,23 @@ export const stagesData = [
 // ============================================================
 export const parcoursData = [
   {
+    id: 'epitech-3',
+    date: '2026 - Actuellement',
+    title: 'EPITECH - 3ème Année',
+    place: 'Lille',
+    imageplace: 'EPITECH',
+    logo: epitechLogo,
+    description: `Année <strong>en cours</strong>.<br/>Spécialisation visée : <strong>IA</strong> (principale), Maths & DevOps (secondaires).<br/>En cours : badge Google DeepMind — <em>AI Research Foundations</em>.`,
+    tags: ['IA', 'Maths', 'DevOps'],
+  },
+  {
     id: 'epitech-2',
-    date: 'Début 2026 - Actuellement',
+    date: '2025 - 2026',
     title: 'EPITECH - 2ème Année',
     place: 'Lille',
     imageplace: 'EPITECH',
     logo: epitechLogo,
-    description: `Année validée avec <strong>les félicitations</strong>.<br/>Plus de 35 projets réalisés cette année comme :<br/>&emsp; Piscine (C++, Rust, Haskell), Raytracer (Rust), Starttrek (Python, IA reinforcement learning).<br/>Réalisé cette année :<br/>&emsp;- Modules IA, DevOps et Maths.<br/>&emsp;- User Group de CyberSécurité (HackTheBox Season 10).<br/>&emsp;- RobotCar (Projet de voiture autonome, nous sommes cinq et nous representons EPITECH Lille sur le &emsp;&emsp;concours national)<br/>TEPitech/TOIEC: <strong>910 points</strong>.`,
+    description: `Année validée avec <strong>les félicitations</strong> (piscine).<br/>16 projets réalisés cette année comme :<br/>&emsp; Piscine (C++, Rust, Haskell), Raytracer (Rust), Starttrek (Python, IA reinforcement learning).<br/>Réalisé cette année :<br/>&emsp;- Modules IA, DevOps et Maths.<br/>&emsp;- User Group de CyberSécurité (HackTheBox Season 10).<br/>&emsp;- RobotCar (Projet de voiture autonome, nous sommes cinq et nous representons EPITECH Lille sur le &emsp;&emsp;concours national)<br/>TEPitech/TOIEC: <strong>910 points</strong>.`,
     tags: ['C++', 'Rust', 'Python', 'Haskell', 'Jenkins'],
   },
   {
@@ -136,8 +137,8 @@ export const parcoursData = [
     place: '',
     imageplace: 'Cyllene',
     logo: cylleneLogo,
-    description: `Développement d'un <strong>outil de génération automatique d'infrastructure client</strong> en Python ayant permis la visualisation de celles-ci pour tout les clients.<br/>Automatisation du déploiement d'environnements et standardisation des processus.`,
-    tags: ['Python', 'DevOps', 'Automation'],
+    description: `Développement <strong>en autonomie</strong> d'un outil Python de génération et de visualisation automatique des infrastructures clients, intégré aux pipelines GitLab CI/CD.<br/>Utilisé pour accélérer la communication technique avec les clients et les équipes compta/dev.<br/>Travail en autonomie avec point hebdomadaire.`,
+    tags: ['Python', 'DevOps', 'Automation', 'GitLab CI/CD'],
   },
   {
     id: 'epitech-1',
@@ -176,24 +177,30 @@ export const parcoursData = [
 // ============================================================
 export const skillsData = {
   langages: [
-    { name: 'Rust', img: rustLogo },
-    { name: 'Python', img: pythonLogo },
-    { name: 'C', img: cLogo },
-    { name: 'C++', img: cppLogo },
-    { name: 'React', img: reactLogo },
-    { name: 'JavaScript', img: jsLogo },
+    { name: 'Python', img: pythonLogo, level: 'Solide' },
+    { name: 'C', img: cLogo, level: 'Solide' },
+    { name: 'Rust', img: rustLogo, level: "À l'aise" },
+    { name: 'React', img: reactLogo, level: 'Notions' },
+    { name: 'JavaScript', img: jsLogo, level: 'Notions' },
+    { name: 'C++', img: cppLogo, level: 'Notions' },
     { name: 'HTML', img: htmlLogo },
     { name: 'CSS', img: cssLogo },
   ],
   outils: [
-    { name: 'Linux', img: linuxLogo },
-    { name: 'n8n', img: n8nLogo },
-    { name: 'Docker', img: dockerLogo },
-    { name: 'GitHub', img: githubLogo },
-    { name: 'GitLab', img: gitlabLogo },
-    { name: 'Canva', img: canvaLogo },
+    { name: 'Linux', img: linuxLogo, level: 'Solide' },
+    { name: 'GitHub', img: githubLogo, level: 'Solide' },
+    { name: 'GitLab CI/CD', img: gitlabLogo, level: "À l'aise" },
+    { name: 'Docker', img: dockerLogo, level: 'Intermédiaire' },
+    { name: 'n8n', img: n8nLogo, level: 'Notions' },
+    { name: 'Jenkins', img: jenkinsLogo, level: 'Notions' },
+    { name: 'SSH', img: sshLogo },
     { name: 'VS Code', img: vscodeLogo },
-    { name: 'Jenkins', img: jenkinsLogo },
+    { name: 'Canva', img: canvaLogo },
+    { name: 'Ollama', img: ollamaLogo, level: 'Pratique locale + API', learning: true },
+    { name: 'Kubernetes', img: kubernetesLogo, learning: true },
+    // { name: 'Terraform', img: terraformLogo, learning: true },
+    { name: 'Claude Code', img: claudeCodeLogo, learning: true },
+    { name: 'Tailscale', img: tailscaleLogo, learning: true },
   ],
   langues: [
     { name: 'Français', level: 'C2 - Natif', img: frFlag },
@@ -229,38 +236,48 @@ export const skillsData = {
 // ============================================================
 export const projectsData = [
   {
-    title: 'RoboCar - N4S',
+    title: 'RoboCar',
     image: imgrobocar,
-    description: "Création d'une voiture autonome sur une base de voiture télécommandée sur un circuit avec des lignes blanches. Nous sommes l'équipe représentant le campus de Lille sur la competition national EPITECH.",
+    description: "Voiture quasi-autonome suivant une ligne blanche sur circuit. Rôle : construction physique + algorithmes embarqués. Repris en 2026 avec de nouveaux objectifs.",
     tags: ['IA', 'Python', 'Câblage', 'Robotique'],
+    status: 'en-cours',
+    statusLabel: 'En cours (v2) — EPITECH',
     repo: null,
   },
   {
-    title: 'ALF-CLI - En cours',
+    title: 'ALF',
     image: imgalf,
-    description: "CLI agentique (comme claude code) utilisant des API Ollama gratuites.",
+    description: "Moteur agentique perso (ALF) connecté aux APIs Ollama. Sous-composants : ALF-CLI (interface ligne de commande), ALF-UI (interface web, à venir).",
     tags: ['IA', 'Python', 'API'],
-    repo: null,
+    status: 'en-cours',
+    statusLabel: 'En cours',
+    repo: 'https://github.com/EtienneP-26/ALF.git',
   },
   {
     title: 'Tri d\'emails automatisé',
     image: imgAutoMail,
-    description: "Rangement de mes mails pro automatiquement avec n8n et une API Ollama de Gemma4.",
+    description: "Tri automatique des emails, déployé sur VPS perso, LLM local via API Ollama (migration prévue vers gpt-oss:20b pour réduire la consommation de tokens).",
     tags: ['n8n', 'IA', 'Automatisation', 'API'],
+    status: 'termine',
+    statusLabel: 'Terminé, itéré',
     repo: null,
   },
   {
     title: 'StartTrek',
     image: imgstarttrek,
-    description: "Projet EPITECH : Apprendre à un module spaciale à alunir en faisant du reinforcement learning.",
+    description: "Modèle de Reinforcement Learning pour l'alunissage autonome d'un module spatial simulé.",
     tags: ['IA', 'Python', 'Reinforcement Learning'],
+    status: 'termine',
+    statusLabel: 'Terminé — EPITECH',
     repo: null,
   },
   {
     title: 'CVRIE',
     image: imgcvrie,
-    description: "Projet EPITECH : Détection de tumeurs cérébrales à partir d’images et Natural Language Processing.",
+    description: "Clustering non supervisé (8 groupes distincts) sur une base de symptômes patients + détection de tumeurs cérébrales par imagerie/NLP (partie réalisée par un coéquipier).",
     tags: ['IA', 'Python', 'Supervised', 'Unsupervised'],
+    status: 'termine',
+    statusLabel: 'Terminé — EPITECH',
     repo: null,
   },
   // {
@@ -280,24 +297,59 @@ export const projectsData = [
   {
     title: 'My DOOM',
     image: imgmyDoom,
-    description: "Moteur de jeu type Raycasting (Doom-like) écrit en C avec CSFML. Gestion de textures, physique et son.",
+    description: "Doom-like en C avec CSFML (raycasting, 2.5D). Projet d'équipe Tek1.",
     tags: ['C', 'CSFML', 'Game Engine'],
+    status: 'termine',
+    statusLabel: 'Terminé — EPITECH',
     repo: 'https://github.com/EtienneP-26/My-DOOM-FPS',
   },
   {
-    title: 'MinIA - En Attente',
+    title: 'MinIA',
     image: imgMinIA,
-    description: "Chatbot IA développé en Python pur (sans framework ML). Implémentation de réseaux de neurones from scratch.",
+    description: "Réimplémentation d'un petit LLM. Prochaine étape à définir — piste envisagée : extension vers le multimodal (texte → image).",
     tags: ['Python', 'AI', 'Maths'],
+    status: 'en-exploration',
+    statusLabel: 'En exploration — Perso',
     repo: 'https://github.com/EtienneP-26/MinIA',
   },
   {
     title: 'MySH',
     image: imgmysh,
-    description: "Projet EPITECH : Recréation d'un Shell Unix en C (basé sur tcsh). Gestion des processus, pipes, redirections et signaux.",
+    description: "Réimplémentation d'un shell Unix (parsing, redirections, pipes, builtins) en C, en plusieurs étapes individuelles puis en équipe.",
     tags: ['C', 'Unix', 'System'],
+    status: 'termine',
+    statusLabel: 'Terminé — EPITECH',
     repo: 'https://github.com/EtienneP-26/mysh',
   },
+  {
+    title: 'project-template',
+    image: imgprojecttemplate,
+    description: "Outil de scaffolding pour générer une base de repo instantanément (bonnes pratiques, structure prête à l'emploi).",
+    tags: ['Github Actions', 'Docker', 'Bash', 'Scaffolding', 'Automatisation'],
+    status: 'perso',
+    statusLabel: 'Perso',
+    repo: 'https://github.com/EtienneP-26/project-template.git',
+  },
+  // {
+  //   title: 'PyTorch from scratch (Python & Rust)',
+  //   image: imgpytorch,
+  //   description: "Réimplémentation des fondamentaux de PyTorch (tenseurs, autograd) en Python puis en Rust.",
+  //   tags: ['Python', 'Rust', 'Machine Learning'],
+  //   status: 'en-cours',
+  //   statusLabel: 'En cours — EPITECH',
+  //   repo: null,
+  // },
+]
+
+// ============================================================
+//  SECTION ROADMAP — Prochainement
+// ============================================================
+export const roadmapData = [
+  'PyTorch from scratch (Python & Rust)',
+  'Fine-tuning de modèles LLM (expérimentations)',
+  'RPG 2D sur Godot (avec un ami)',
+  'Applications mobiles',
+  'MySH réécrit en Rust',
 ]
 
 // ============================================================
