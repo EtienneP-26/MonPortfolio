@@ -44,7 +44,7 @@ const Projects = () => {
               <div className="project-card" key={idx}>
                 {/* Image */}
                 <div className="pc-image">
-                  <img src={project.image} alt={project.title} />
+                  {project.image && <img src={project.image} alt={project.title} />}
                   {project.statusLabel && (
                     <span className={`pc-status ${statusClass[project.status] || ''}`}>
                       {project.statusLabel}

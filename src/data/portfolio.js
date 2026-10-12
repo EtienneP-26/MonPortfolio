@@ -123,7 +123,7 @@ export const parcoursData = [
     place: 'Lille',
     imageplace: 'EPITECH',
     logo: epitechLogo,
-    description: `Année <strong>en cours</strong>.<br/>Spécialisation visée : <strong>IA</strong> (principale), Maths & DevOps (secondaires).<br/>En cours : badge Google DeepMind — <em>AI Research Foundations</em>.`,
+    description: `Année <strong>en cours</strong>.<br/>Spécialisation visée : <strong>IA</strong> (principale), Maths & DevOps (secondaires).<br/>En cours : badge Google DeepMind — <em>AI Research Foundations</em>.<br/>Projets en cours :<br/>&emsp;- MyTorch : réseau de neurones recodé from scratch, utilisé pour jouer aux échecs.<br/>&emsp;- Bernstein : conception d'une infrastructure Kubernetes (module DevOps).<br/>&emsp;- IA Sensai : IA en ligne de commande, dans la veine d'ALF-CLI.<br/>&emsp;- Cryptographie : réimplémentation de XOR, AES, RSA et PGP.`,
     tags: ['IA', 'Maths', 'DevOps'],
   },
   {
@@ -265,12 +265,12 @@ export const skillsData = {
 // ============================================================
 export const projectsData = [
   {
-    title: 'RoboCar',
-    image: imgrobocar,
-    description: "Voiture quasi-autonome suivant une ligne blanche sur circuit. Rôle : construction physique + algorithmes embarqués. Repris en 2026 avec de nouveaux objectifs.",
-    tags: ['IA', 'Python', 'Câblage', 'Robotique'],
+    title: 'Noctia',
+    image: imgNoctia,
+    description: "Plugin Claude Code pour faciliter le développement avec l'IA : règles de dev et modes de travail (l'IA comme mentor, ou en autonomie avec orchestrateur et sous-agents), plus des mods Claude Code. Inclut des garde-fous (hook git, scan des manques d'un projet, audit).",
+    tags: ['IA', 'Claude Code', 'Agents'],
     status: 'en-cours',
-    statusLabel: 'En cours (v2) — EPITECH',
+    statusLabel: 'En cours — Perso',
     repo: null,
   },
   {
@@ -292,6 +292,60 @@ export const projectsData = [
     repo: null,
   },
   {
+    title: 'RoboCar',
+    image: imgrobocar,
+    description: "Voiture quasi-autonome sur circuit (v1 : suivi d'une ligne blanche). En v2 (2026), ajout d'un LiDAR et d'une caméra 3D pour viser une conduite autonome dans tout type d'environnement. Rôle : construction physique et algorithmes embarqués.",
+    tags: ['IA', 'Python', 'Câblage', 'Robotique'],
+    status: 'en-cours',
+    statusLabel: 'En cours (v2) — EPITECH',
+    repo: null,
+  },
+  // {
+  //   title: 'Bernstein',
+  //   image: null,
+  //   description: "Projet du module DevOps : conception d'une infrastructure Kubernetes.",
+  //   tags: ['DevOps', 'Kubernetes'],
+  //   status: 'en-cours',
+  //   statusLabel: 'En cours — EPITECH',
+  //   repo: null,
+  // },
+  {
+    title: 'MyTorch',
+    image: imgMyTorch,
+    description: "Réseau de neurones recodé from scratch, utilisé ensuite pour jouer aux échecs.",
+    tags: ['IA', 'Deep Learning'],
+    status: 'en-cours',
+    statusLabel: 'En cours — EPITECH',
+    repo: null,
+  },
+  {
+    title: 'RIMP',
+    image: imgRimp,
+    description: "Application de dessin pour Linux, écrite en Rust, avec support de tablette graphique. Née d'un projet EPITECH (recoder GIMP), réorientée vers le dessin.",
+    tags: ['Rust', 'Linux', 'Graphisme'],
+    status: 'en-cours',
+    statusLabel: 'En cours — Perso & EPITECH',
+    repo: null,
+  },
+  // {
+  //   title: 'IA Sensai',
+  //   image: null,
+  //   description: "Projet EPITECH d'IA en ligne de commande, dans la même veine qu'ALF-CLI.",
+  //   tags: ['IA', 'Python'],
+  //   status: 'en-cours',
+  //   statusLabel: 'En cours — EPITECH',
+  //   repo: null,
+  // },
+  // {
+  //   title: 'Module Cryptographie',
+  //   image: null,
+  //   description: "Réimplémentation d'algorithmes de cryptographie : XOR, AES, RSA et PGP.",
+  //   tags: ['Cryptographie'],
+  //   status: 'en-cours',
+  //   statusLabel: 'En cours — EPITECH',
+  //   repo: null,
+  // },
+  {
     title: 'StartTrek',
     image: imgstarttrek,
     description: "Modèle de Reinforcement Learning pour l'alunissage autonome d'un module spatial simulé.",
@@ -301,26 +355,21 @@ export const projectsData = [
     repo: null,
   },
   {
+    title: 'MinIA',
+    image: imgMinIA,
+    description: "Réimplémentation d'un petit LLM. Prochaine étape à définir — piste envisagée : extension vers le multimodal (texte → image).",
+    tags: ['Python', 'AI', 'Maths'],
+    status: 'en-exploration',
+    statusLabel: 'En exploration — Perso',
+    repo: 'https://github.com/EtienneP-26/MinIA',
+  },
+  {
     title: 'CVRIE',
     image: imgcvrie,
     description: "Clustering non supervisé (8 groupes distincts) sur une base de symptômes patients + détection de tumeurs cérébrales par imagerie/NLP (partie réalisée par un coéquipier).",
     tags: ['IA', 'Python', 'Supervised', 'Unsupervised'],
     status: 'termine',
     statusLabel: 'Terminé — EPITECH',
-    repo: null,
-  },
-  // {
-  //   title: 'MyMarvin',
-  //   image: imgmymarvin,
-  //   description: "Projet EPITECH : Tests automatisés à l’aide de Jenkins",
-  //   tags: ['Jenkins', 'DevOps', 'Automatisation'],
-  //   repo: null,
-  // },
-  {
-    title: 'Mon Portfolio',
-    image: imgmonportfolio,
-    description: "Interface moderne React/Vite avec design 'Bento Grid'. Vitrine de mes compétences et projets.",
-    tags: ['React', 'CSS3', 'Vite'],
     repo: null,
   },
   {
@@ -333,15 +382,6 @@ export const projectsData = [
     repo: 'https://github.com/EtienneP-26/My-DOOM-FPS',
   },
   {
-    title: 'MinIA',
-    image: imgMinIA,
-    description: "Réimplémentation d'un petit LLM. Prochaine étape à définir — piste envisagée : extension vers le multimodal (texte → image).",
-    tags: ['Python', 'AI', 'Maths'],
-    status: 'en-exploration',
-    statusLabel: 'En exploration — Perso',
-    repo: 'https://github.com/EtienneP-26/MinIA',
-  },
-  {
     title: 'MySH',
     image: imgmysh,
     description: "Réimplémentation d'un shell Unix (parsing, redirections, pipes, builtins) en C, en plusieurs étapes individuelles puis en équipe.",
@@ -349,6 +389,13 @@ export const projectsData = [
     status: 'termine',
     statusLabel: 'Terminé — EPITECH',
     repo: 'https://github.com/EtienneP-26/mysh',
+  },
+  {
+    title: 'Mon Portfolio',
+    image: imgmonportfolio,
+    description: "Interface moderne React/Vite avec design 'Bento Grid'. Vitrine de mes compétences et projets.",
+    tags: ['React', 'CSS3', 'Vite'],
+    repo: null,
   },
   {
     title: 'project-template',
@@ -359,6 +406,13 @@ export const projectsData = [
     statusLabel: 'Perso',
     repo: 'https://github.com/EtienneP-26/project-template.git',
   },
+  // {
+  //   title: 'MyMarvin',
+  //   image: imgmymarvin,
+  //   description: "Projet EPITECH : Tests automatisés à l’aide de Jenkins",
+  //   tags: ['Jenkins', 'DevOps', 'Automatisation'],
+  //   repo: null,
+  // },
   // {
   //   title: 'PyTorch from scratch (Python & Rust)',
   //   image: imgpytorch,
@@ -374,11 +428,9 @@ export const projectsData = [
 //  SECTION ROADMAP — Prochainement
 // ============================================================
 export const roadmapData = [
-  'PyTorch from scratch (Python & Rust)',
   'Fine-tuning de modèles LLM (expérimentations)',
-  'RPG 2D sur Godot (avec un ami)',
-  'Applications mobiles',
   'MySH réécrit en Rust',
+  'Bibliothèque Python à cœur Rust, pour accélérer du code Python via des appels de fonctions',
 ]
 
 // ============================================================
