@@ -232,10 +232,6 @@
   transition: border-color 0.25s;
 }
 
-.hero-internship .status-dot-active {
-  flex-shrink: 0;
-}
-
 .hero-internship:hover {
   border-color: var(--border-hover);
 }

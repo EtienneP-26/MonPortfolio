@@ -114,40 +114,40 @@ const Profil = () => {
           animate="visible"
           custom={5}
         >
-          <span className="status-dot-active" />
           <span>
             Recherche de stage · {stageAvailability.start} → {stageAvailability.end} {stageAvailability.year} · {stageAvailability.region} ({stageAvailability.remote})
           </span>
         </motion.a>
 
         {/* Status bar */}
-        <motion.div
-          className="status-bar"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={6}
-        >
-          {profileData.statuses.map((s, i) => (
-            <React.Fragment key={i}>
-              {i > 0 && <div className="status-divider" />}
-              <div className="status-item">
-                <span className="status-icon">
-                  {s.icon === 'active-dot' ? (
-                    <span className="status-dot-active" />
-                  ) : (
-                    s.icon
-                  )}
-                </span>
-                <div className="status-text">
-                  <strong>{s.title}</strong>
-                  <span>{s.subtitle}</span>
+        {profileData.statuses.length > 0 && (
+          <motion.div
+            className="status-bar"
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={6}
+          >
+            {profileData.statuses.map((s, i) => (
+              <React.Fragment key={i}>
+                {i > 0 && <div className="status-divider" />}
+                <div className="status-item">
+                  <span className="status-icon">
+                    {s.icon === 'active-dot' ? (
+                      <span className="status-dot-active" />
+                    ) : (
+                      s.icon
+                    )}
+                  </span>
+                  <div className="status-text">
+                    <strong>{s.title}</strong>
+                    <span>{s.subtitle}</span>
+                  </div>
                 </div>
-              </div>
-            </React.Fragment>
-          ))}
-        </motion.div>
-
+              </React.Fragment>
+            ))}
+          </motion.div>
+        )}
 
       </div>
     </section>

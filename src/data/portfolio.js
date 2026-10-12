@@ -19,6 +19,7 @@ import cLogo from '../assets/logos/c.png'
 import cppLogo from '../assets/logos/cpp.png'
 import reactLogo from '../assets/logos/react.png'
 import gitlabLogo from '../assets/logos/gitlab.png'
+import githubLogo from '../assets/logos/github.png'
 import linuxLogo from '../assets/logos/linux.jpeg'
 import dockerLogo from '../assets/logos/docker.png'
 import n8nLogo from '../assets/logos/n8n.png'
@@ -198,35 +199,35 @@ export const skillsData = {
       ],
     },
     {
-      title: 'DevOps & Infra',
+      title: 'Web',
       skills: [
-        { name: 'Linux', img: linuxLogo, level: 'maitrise' },
-        { name: 'Docker', img: dockerLogo, level: 'maitrise' },
-        { name: 'GitLab CI/CD', img: gitlabLogo, level: 'maitrise' },
-        { name: 'GitHub Actions', short: 'GA', level: 'maitrise' },
-        { name: 'Tailscale', img: tailscaleLogo, level: 'maitrise' },
-        { name: 'SSH', img: sshLogo, level: 'maitrise' },
-        { name: 'n8n', img: n8nLogo, level: 'maitrise' },
-        { name: 'Jenkins', img: jenkinsLogo, level: 'pratique' },
-        { name: 'Kubernetes', img: kubernetesLogo, level: 'apprentissage' },
+        { name: 'React', img: reactLogo, level: 'pratique' },
+        { name: 'JavaScript', img: jsLogo, level: 'pratique' },
+        { name: 'HTML/CSS', img: htmlLogo, level: 'pratique' },
       ],
     },
     {
       title: 'Systèmes & embarqué',
       skills: [
-        { name: 'C', img: cLogo, level: 'maitrise' },
         { name: 'Rust', img: rustLogo, level: 'maitrise' },
+        { name: 'C', img: cLogo, level: 'maitrise' },
         { name: 'C++', img: cppLogo, level: 'pratique' },
         { name: 'Haskell', short: 'Hs', level: 'pratique' },
         { name: 'Bash', short: 'sh', level: 'pratique' },
       ],
     },
     {
-      title: 'Web',
+      title: 'DevOps & Infra',
       skills: [
-        { name: 'React', img: reactLogo, level: 'pratique' },
-        { name: 'JavaScript', img: jsLogo, level: 'pratique' },
-        { name: 'HTML/CSS', img: htmlLogo, level: 'pratique' },
+        { name: 'Linux', img: linuxLogo, level: 'maitrise' },
+        { name: 'Docker', img: dockerLogo, level: 'maitrise' },
+        { name: 'GitHub Actions', img: githubLogo, level: 'maitrise' },
+        { name: 'Tailscale', img: tailscaleLogo, level: 'maitrise' },
+        { name: 'SSH', img: sshLogo, level: 'maitrise' },
+        { name: 'n8n', img: n8nLogo, level: 'maitrise' },
+        { name: 'GitLab CI/CD', img: gitlabLogo, level: 'pratique' },
+        { name: 'Jenkins', img: jenkinsLogo, level: 'pratique' },
+        { name: 'Kubernetes', img: kubernetesLogo, level: 'apprentissage' },
       ],
     },
   ],
