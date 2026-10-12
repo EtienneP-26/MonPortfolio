@@ -128,6 +128,68 @@
   cursor: help;
 }
 
+/* ── Niveaux : rempli / moitié / contour ── */
+.skill-badge.level-maitrise {
+  background: var(--accent-light);
+}
+
+.skill-badge.level-pratique {
+  background: linear-gradient(90deg, var(--accent-light) 50%, transparent 50%);
+  border: 1px solid var(--accent-light);
+}
+
+.skill-badge.level-apprentissage {
+  background: transparent;
+  border: 1px solid var(--accent-light);
+}
+
+.skill-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  list-style: none;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.skill-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skill-legend .skill-badge {
+  position: static;
+  cursor: default;
+}
+
+/* Pastille texte pour une compétence sans icône */
+.bento-logo-item .skill-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--accent-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ── Langues ── */
 .bento-languages {
   display: flex;

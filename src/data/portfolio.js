@@ -18,17 +18,13 @@ import rustLogo from '../assets/logos/rust_white.png'
 import cLogo from '../assets/logos/c.png'
 import cppLogo from '../assets/logos/cpp.png'
 import reactLogo from '../assets/logos/react.png'
-import githubLogo from '../assets/logos/github.png'
 import gitlabLogo from '../assets/logos/gitlab.png'
-import vscodeLogo from '../assets/logos/vscode.png'
 import linuxLogo from '../assets/logos/linux.jpeg'
 import dockerLogo from '../assets/logos/docker.png'
 import n8nLogo from '../assets/logos/n8n.png'
 import jenkinsLogo from '../assets/logos/jenkins.png'
 import htmlLogo from '../assets/logos/html.png'
-import cssLogo from '../assets/logos/css.png'
 import sfmlLogo from '../assets/logos/sfml.png'
-import canvaLogo from '../assets/logos/canva.png'
 import kubernetesLogo from '../assets/logos/kubernetes.png'
 import terraformLogo from '../assets/logos/terraform.png'
 import sshLogo from '../assets/logos/ssh.png'
@@ -74,11 +70,11 @@ Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage DevOps / MLOp
   email: 'contact@etienne-pouille.work',
   phone: '06.24.37.79.40',
   statuses: [
-    {
-      icon: 'active-dot',
-      title: 'Freelance',
-      subtitle: 'Je suis ouvert aux missions de développement en Freelance sur mon temps libre.',
-    },
+    // {
+    //   icon: 'active-dot',
+    //   title: 'Freelance',
+    //   subtitle: 'Je suis ouvert aux missions de développement en Freelance sur mon temps libre.',
+    // },
   ],
 }
 
@@ -184,32 +180,55 @@ export const parcoursData = [
 // ============================================================
 //  SECTION COMPÉTENCES
 // ============================================================
+export const skillLevels = {
+  maitrise: 'Maîtrisé',
+  pratique: 'Pratiqué',
+  apprentissage: 'En apprentissage',
+}
+
 export const skillsData = {
-  langages: [
-    { name: 'Python', img: pythonLogo },
-    { name: 'C', img: cLogo },
-    { name: 'Rust', img: rustLogo },
-    { name: 'React', img: reactLogo },
-    { name: 'JavaScript', img: jsLogo },
-    { name: 'C++', img: cppLogo },
-    { name: 'HTML', img: htmlLogo },
-    { name: 'CSS', img: cssLogo },
-  ],
-  outils: [
-    { name: 'Linux', img: linuxLogo },
-    { name: 'GitHub', img: githubLogo },
-    { name: 'GitLab CI/CD', img: gitlabLogo },
-    { name: 'Docker', img: dockerLogo },
-    { name: 'n8n', img: n8nLogo },
-    { name: 'Jenkins', img: jenkinsLogo },
-    { name: 'SSH', img: sshLogo },
-    { name: 'VS Code', img: vscodeLogo },
-    { name: 'Canva', img: canvaLogo },
-    { name: 'Ollama', img: ollamaLogo, learning: true },
-    { name: 'Kubernetes', img: kubernetesLogo, learning: true },
-    // { name: 'Terraform', img: terraformLogo, learning: true },
-    { name: 'Claude Code', img: claudeCodeLogo, learning: true },
-    { name: 'Tailscale', img: tailscaleLogo, learning: true },
+  categories: [
+    {
+      title: 'IA & MLOps',
+      skills: [
+        { name: 'Python', img: pythonLogo, level: 'maitrise' },
+        { name: 'Ollama', img: ollamaLogo, level: 'maitrise' },
+        { name: 'Claude Code', img: claudeCodeLogo, level: 'maitrise' },
+        { name: 'Reinforcement Learning', short: 'RL', level: 'pratique' },
+      ],
+    },
+    {
+      title: 'DevOps & Infra',
+      skills: [
+        { name: 'Linux', img: linuxLogo, level: 'maitrise' },
+        { name: 'Docker', img: dockerLogo, level: 'maitrise' },
+        { name: 'GitLab CI/CD', img: gitlabLogo, level: 'maitrise' },
+        { name: 'GitHub Actions', short: 'GA', level: 'maitrise' },
+        { name: 'Tailscale', img: tailscaleLogo, level: 'maitrise' },
+        { name: 'SSH', img: sshLogo, level: 'maitrise' },
+        { name: 'n8n', img: n8nLogo, level: 'maitrise' },
+        { name: 'Jenkins', img: jenkinsLogo, level: 'pratique' },
+        { name: 'Kubernetes', img: kubernetesLogo, level: 'apprentissage' },
+      ],
+    },
+    {
+      title: 'Systèmes & embarqué',
+      skills: [
+        { name: 'C', img: cLogo, level: 'maitrise' },
+        { name: 'Rust', img: rustLogo, level: 'maitrise' },
+        { name: 'C++', img: cppLogo, level: 'pratique' },
+        { name: 'Haskell', short: 'Hs', level: 'pratique' },
+        { name: 'Bash', short: 'sh', level: 'pratique' },
+      ],
+    },
+    {
+      title: 'Web',
+      skills: [
+        { name: 'React', img: reactLogo, level: 'pratique' },
+        { name: 'JavaScript', img: jsLogo, level: 'pratique' },
+        { name: 'HTML/CSS', img: htmlLogo, level: 'pratique' },
+      ],
+    },
   ],
   langues: [
     { name: 'Français', level: 'C2 - Natif', img: frFlag },
