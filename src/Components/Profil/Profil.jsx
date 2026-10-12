@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import './Profil.css'
-import { profileData } from '../../data/portfolio'
+import { profileData, stageAvailability } from '../../data/portfolio'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -64,13 +64,69 @@ const Profil = () => {
           ))}
         </motion.p>
 
+        {/* Centres d'intérêt */}
+        <motion.p
+          className="hero-interests"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={3}
+        >
+          {profileData.interests}
+        </motion.p>
+
+        {/* Boutons d'action */}
+        <motion.div
+          className="hero-actions"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={4}
+        >
+          <a
+            href={profileData.cv}
+            download="CV_Etienne_POUILLE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            Télécharger mon CV
+          </a>
+          <a href="#contact" className="btn btn-secondary">
+            Me contacter
+          </a>
+          <a
+            href={profileData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
+            GitHub
+          </a>
+        </motion.div>
+
+        {/* Pastille stage */}
+        <motion.a
+          href="#stage"
+          className="hero-internship"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={5}
+        >
+          <span className="status-dot-active" />
+          <span>
+            Recherche de stage · {stageAvailability.start} → {stageAvailability.end} {stageAvailability.year} · {stageAvailability.region} ({stageAvailability.remote})
+          </span>
+        </motion.a>
+
         {/* Status bar */}
         <motion.div
           className="status-bar"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={4}
+          custom={6}
         >
           {profileData.statuses.map((s, i) => (
             <React.Fragment key={i}>

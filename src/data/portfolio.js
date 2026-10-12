@@ -65,13 +65,10 @@ export const profileData = {
   name: 'Etienne POUILLE',
   photo: profileImg,
   cv: CV,
-  subtitle: 'Étudiant EPITECH — 3ème Année',
-  bio: `Je réside dans le nord de la France.
-Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille,
-actuellement en 3ème année (2026-2027), après avoir validé les deux premières avec les félicitations.
-Passionné par le développement web et logiciel, j'aime apprendre de nouvelles technologies et réaliser des projets.
-Mes centres d'intérêts incluent le développement mais également
-le sport (automobile, pratique de l'escalade et de la callisthénie), les sciences, la musique ou encore le dessin.`,
+  subtitle: 'ÉTUDIANT EPITECH - DevOps · MLOps · IA Engineer · Edge AI · FDE',
+  bio: `Étudiant en 3ème année à EPITECH Lille, je construis des infrastructures et des systèmes d'IA : pipelines CI/CD, LLM locaux avec Ollama, IA embarquée sur voiture autonome.
+Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage DevOps / MLOps / Edge AI du 29 mars au 27 août 2027, dans le Nord de la France.`,
+  interests: "Centres d'intérêt : sport (automobile, escalade, callisthénie), sciences, musique, dessin.",
   github: 'https://github.com/EtienneP-26',
   linkedin: 'https://www.linkedin.com/in/etienne-pouille-8b7814349/',
   email: 'contact@etienne-pouille.work',
@@ -88,12 +85,21 @@ le sport (automobile, pratique de l'escalade et de la callisthénie), les scienc
 // ============================================================
 //  SECTION STAGE
 // ============================================================
+export const stageAvailability = {
+  start: '29 mars',
+  end: '27 août',
+  year: '2027',
+  region: 'Nord',
+  cities: 'Dunkerque, Calais, Lille et ses alentours',
+  remote: 'télétravail toléré',
+}
+
 export const stagesData = [
   {
     id: 'fulltime',
     type: 'Stage Temps Plein',
     badge: '5 jours/semaine',
-    period: '29 mars 2027 → 27 août 2027',
+    period: `${stageAvailability.start} ${stageAvailability.year} → ${stageAvailability.end} ${stageAvailability.year}`,
     duration: '4-5 mois',
     context: [
       "En fin de 3ème année, je serai disponible à temps plein pour un stage conventionnel.",
@@ -101,7 +107,7 @@ export const stagesData = [
     ],
     details: [
       { label: 'Domaine', value: 'DevOps, MLOps, IA, Edge AI' },
-      { label: 'Localisation', value: 'Nord (Dunkerque, Calais, Lille et ses alentours) — télétravail toléré' },
+      { label: 'Localisation', value: `${stageAvailability.region} (${stageAvailability.cities}) — ${stageAvailability.remote}` },
       { label: 'Rythme', value: '5 jours/semaine - temps plein' },
       { label: 'Type de contrat', value: 'Stage / CDD / CDI' },
     ],
