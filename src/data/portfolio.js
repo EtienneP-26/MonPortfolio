@@ -52,6 +52,9 @@ import imgcvrie from '../assets/projects/cvrie.png'
 import imgalf from '../assets/projects/ALF.png'
 import imgAutoMail from '../assets/projects/autoMail.png'
 import imgprojecttemplate from '../assets/projects/project-template.png'
+import imgNoctia from '../assets/projects/Noctia.png'
+import imgRimp from '../assets/projects/RIMP.png'
+import imgMyTorch from '../assets/projects/MyTorch.png'
 // import imgpytorch from '../assets/projects/pytorch-from-scratch.png'
 // import imgmymarvin from '../assets/projects/myma.png'
 
@@ -127,7 +130,7 @@ export const parcoursData = [
     place: 'Lille',
     imageplace: 'EPITECH',
     logo: epitechLogo,
-    description: `Année validée avec <strong>les félicitations</strong> (piscine).<br/>16 projets réalisés cette année comme :<br/>&emsp; Piscine (C++, Rust, Haskell), Raytracer (Rust), Starttrek (Python, IA reinforcement learning).<br/>Réalisé cette année :<br/>&emsp;- Modules IA, DevOps et Maths.<br/>&emsp;- User Group de CyberSécurité (HackTheBox Season 10).<br/>&emsp;- RobotCar (Projet de voiture autonome, nous sommes cinq et nous representons EPITECH Lille sur le &emsp;&emsp;concours national)<br/>TEPitech/TOIEC: <strong>910 points</strong>.`,
+    description: `Année validée avec <strong>les félicitations</strong>.<br/>16 projets réalisés cette année comme :<br/>&emsp; Piscine (C++, Rust, Haskell), Raytracer (Rust), Starttrek (Python, IA reinforcement learning).<br/>Réalisé cette année :<br/>&emsp;- Modules IA, DevOps et Maths.<br/>&emsp;- User Group de CyberSécurité (HackTheBox Season 10).<br/>&emsp;- RobotCar (Projet de voiture autonome, nous sommes cinq et nous representons EPITECH Lille sur le &emsp;&emsp;concours national)<br/>TEPitech/TOIEC: <strong>910 points</strong>.`,
     tags: ['C++', 'Rust', 'Python', 'Haskell', 'Jenkins'],
   },
   {
