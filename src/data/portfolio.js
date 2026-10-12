@@ -272,7 +272,7 @@ export const projectsData = [
     tags: ['IA', 'Claude Code', 'Agents'],
     status: 'en-cours',
     statusLabel: 'En cours — Perso',
-    repo: null,
+    repo: 'https://github.com/EtienneP-26/Noctia',
   },
   {
     title: 'ALF',
@@ -331,7 +331,7 @@ export const projectsData = [
     tags: ['Rust', 'Linux', 'Graphisme'],
     status: 'en-cours',
     statusLabel: 'En cours — Perso & EPITECH',
-    repo: null,
+    repo: 'https://github.com/EtienneP-26/RIMP',
   },
   // {
   //   title: 'IA Sensai',
@@ -410,7 +410,7 @@ export const projectsData = [
     tags: ['Github Actions', 'Docker', 'Bash', 'Scaffolding', 'Automatisation'],
     status: 'perso',
     statusLabel: 'Perso',
-    repo: 'https://github.com/EtienneP-26/project-template.git',
+    repo: 'https://github.com/EtienneP-26/project-template',
   },
   // {
   //   title: 'MyMarvin',
