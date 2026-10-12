@@ -266,6 +266,7 @@ export const skillsData = {
 export const projectsData = [
   {
     title: 'Noctia',
+    featured: true,
     image: imgNoctia,
     description: "Plugin Claude Code pour faciliter le développement avec l'IA : règles de dev et modes de travail (l'IA comme mentor, ou en autonomie avec orchestrateur et sous-agents), plus des mods Claude Code. Inclut des garde-fous (hook git, scan des manques d'un projet, audit).",
     tags: ['IA', 'Claude Code', 'Agents'],
@@ -275,6 +276,7 @@ export const projectsData = [
   },
   {
     title: 'ALF',
+    featured: true,
     image: imgalf,
     description: "Moteur agentique perso (ALF) connecté aux APIs Ollama. Sous-composants : ALF-CLI (interface ligne de commande), ALF-UI (interface web, à venir).",
     tags: ['IA', 'Python', 'API'],
@@ -284,6 +286,7 @@ export const projectsData = [
   },
   {
     title: 'Tri d\'emails automatisé',
+    featured: true,
     image: imgAutoMail,
     description: "Tri automatique des emails, déployé sur VPS perso, LLM local via API Ollama (migration prévue vers gpt-oss:20b pour réduire la consommation de tokens).",
     tags: ['n8n', 'IA', 'Automatisation', 'API'],
@@ -293,6 +296,7 @@ export const projectsData = [
   },
   {
     title: 'RoboCar',
+    featured: true,
     image: imgrobocar,
     description: "Voiture quasi-autonome sur circuit (v1 : suivi d'une ligne blanche). En v2 (2026), ajout d'un LiDAR et d'une caméra 3D pour viser une conduite autonome dans tout type d'environnement. Rôle : construction physique et algorithmes embarqués.",
     tags: ['IA', 'Python', 'Câblage', 'Robotique'],
@@ -311,6 +315,7 @@ export const projectsData = [
   // },
   {
     title: 'MyTorch',
+    featured: true,
     image: imgMyTorch,
     description: "Réseau de neurones recodé from scratch, utilisé ensuite pour jouer aux échecs.",
     tags: ['IA', 'Deep Learning'],
@@ -320,6 +325,7 @@ export const projectsData = [
   },
   {
     title: 'RIMP',
+    featured: true,
     image: imgRimp,
     description: "Application de dessin pour Linux, écrite en Rust, avec support de tablette graphique. Née d'un projet EPITECH (recoder GIMP), réorientée vers le dessin.",
     tags: ['Rust', 'Linux', 'Graphisme'],
