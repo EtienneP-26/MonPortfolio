@@ -66,9 +66,9 @@ export const profileData = {
   photo: profileImg,
   cv: CV,
   subtitle: 'Étudiant EPITECH — 3ème Année',
-  bio: `J'ai 19 ans, né le 20 juin 2006, et je réside dans le nord de la France.
-Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille
-et je viens de valider ma première année avec les félicitations.
+  bio: `Je réside dans le nord de la France.
+Je suis étudiant en informatique au programme grandes écoles en 5 ans à EPITECH Lille,
+actuellement en 3ème année (2026-2027), après avoir validé les deux premières avec les félicitations.
 Passionné par le développement web et logiciel, j'aime apprendre de nouvelles technologies et réaliser des projets.
 Mes centres d'intérêts incluent le développement mais également
 le sport (automobile, pratique de l'escalade et de la callisthénie), les sciences, la musique ou encore le dessin.`,
