@@ -37,10 +37,6 @@
 }
 
 /* Spans */
-.bento-span-2 {
-  grid-column: span 2;
-}
-
 .bento-full {
   grid-column: 1 / -1;
 }
@@ -67,10 +63,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
   gap: 0.8rem;
-}
-
-.bento-logo-grid-large {
-  gap: 1rem;
 }
 
 .bento-logo-item {
@@ -285,7 +277,6 @@
     grid-template-columns: 1fr;
   }
 
-  .bento-span-2,
   .bento-full {
     grid-column: span 1;
   }
