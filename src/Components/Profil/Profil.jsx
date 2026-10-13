@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import './Profil.css'
-import { profileData, stageAvailability } from '../../data/portfolio'
+import { profileData } from '../../data/portfolio'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -75,50 +75,6 @@ const Profil = () => {
           {profileData.interests}
         </motion.p>
 
-        {/* Boutons d'action */}
-        <motion.div
-          className="hero-actions"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={4}
-        >
-          <a
-            href={profileData.cv}
-            download="CV_Etienne_POUILLE.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            Télécharger mon CV
-          </a>
-          <a href="#contact" className="btn btn-secondary">
-            Me contacter
-          </a>
-          <a
-            href={profileData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            GitHub
-          </a>
-        </motion.div>
-
-        {/* Pastille stage */}
-        <motion.a
-          href="#stage"
-          className="hero-internship"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={5}
-        >
-          <span>
-            Recherche de stage · {stageAvailability.start} → {stageAvailability.end} {stageAvailability.year} · {stageAvailability.region} ({stageAvailability.remote})
-          </span>
-        </motion.a>
-
         {/* Status bar */}
         {profileData.statuses.length > 0 && (
           <motion.div
@@ -126,26 +82,31 @@ const Profil = () => {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            custom={6}
+            custom={4}
           >
-            {profileData.statuses.map((s, i) => (
-              <React.Fragment key={i}>
-                {i > 0 && <div className="status-divider" />}
-                <div className="status-item">
-                  <span className="status-icon">
-                    {s.icon === 'active-dot' ? (
-                      <span className="status-dot-active" />
-                    ) : (
-                      s.icon
+            {profileData.statuses.map((s, i) => {
+              const StatusTag = s.href ? 'a' : 'div'
+              return (
+                <React.Fragment key={i}>
+                  {i > 0 && <div className="status-divider" />}
+                  <StatusTag className="status-item" href={s.href}>
+                    {s.icon && (
+                      <span className="status-icon">
+                        {s.icon === 'active-dot' ? (
+                          <span className="status-dot-active" />
+                        ) : (
+                          s.icon
+                        )}
+                      </span>
                     )}
-                  </span>
-                  <div className="status-text">
-                    <strong>{s.title}</strong>
-                    <span>{s.subtitle}</span>
-                  </div>
-                </div>
-              </React.Fragment>
-            ))}
+                    <div className="status-text">
+                      <strong>{s.title}</strong>
+                      {s.subtitle && <span>{s.subtitle}</span>}
+                    </div>
+                  </StatusTag>
+                </React.Fragment>
+              )
+            })}
           </motion.div>
         )}
 

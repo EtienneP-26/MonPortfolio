@@ -70,6 +70,10 @@ Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage IA / MLOps / 
   email: 'contact@etienne-pouille.work',
   phone: '06.24.37.79.40',
   statuses: [
+    {
+      title: 'Recherche de stage',
+      href: '#stage',
+    },
     // {
     //   icon: 'active-dot',
     //   title: 'Freelance',

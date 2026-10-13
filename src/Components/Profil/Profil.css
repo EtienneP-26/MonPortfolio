@@ -211,29 +211,18 @@
 }
 
 .hero-actions .btn:focus-visible,
-.hero-internship:focus-visible {
+a.status-item:focus-visible {
   outline: 2px solid var(--accent-light);
   outline-offset: 3px;
 }
 
-/* Internship pill */
-.hero-internship {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.6rem 1.2rem;
-  border-radius: 100px;
-  margin-bottom: 2.5rem;
-  font-size: 0.85rem;
-  color: var(--text);
+/* Statut cliquable (ex. Recherche de stage) */
+a.status-item {
   text-decoration: none;
-  transition: border-color 0.25s;
 }
 
-.hero-internship:hover {
-  border-color: var(--border-hover);
+a.status-item:hover strong {
+  color: var(--accent-light);
 }
 
 /* Animations */
@@ -276,10 +265,5 @@
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .hero-internship {
-    border-radius: var(--radius-xl);
-    text-align: left;
   }
 }
