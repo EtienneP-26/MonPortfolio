@@ -71,14 +71,14 @@ Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage IA / MLOps / 
   phone: '06.24.37.79.40',
   statuses: [
     {
-      title: 'Recherche de stage',
+      title: 'En recherche de stage',
       href: '#stage',
     },
-    // {
-    //   icon: 'active-dot',
-    //   title: 'Freelance',
-    //   subtitle: 'Je suis ouvert aux missions de développement en Freelance sur mon temps libre.',
-    // },
+    {
+      icon: 'active-dot',
+      title: 'Freelance',
+      subtitle: 'Automatisation IA',
+    },
   ],
 }
 
