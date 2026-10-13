@@ -1,0 +1,122 @@
+% =====================================================================
+%  CV Etienne POUILLE — une colonne, texte sélectionnable, compatible ATS
+%  Compilation (XeLaTeX) :
+%    Standard : xelatex -jobname=CV_Etienne_POUILLE cv.tex
+%    Ciblé    : xelatex -jobname=CV_Etienne_POUILLE \
+%               '\def\cible{Stage AI Engineer}\input{cv.tex}'
+%  Sur Overleaf (compilateur : XeLaTeX) : décommenter la ligne ci-dessous
+%  pour obtenir la version ciblée, et y modifier l'intitulé du poste.
+% =====================================================================
+%\def\cible{Stage AI Engineer}
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[top=1.5cm,bottom=1.3cm,left=2cm,right=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+
+% --- Polices : Inter si présente (graisse SemiBold pour le gras), sinon TeX Gyre Heros
+\IfFontExistsTF{Inter SemiBold}
+  {\setmainfont{Inter}[Ligatures=NoCommon,BoldFont={Inter SemiBold},RawFeature={-calt;-case}]}
+  {\setmainfont{TeX Gyre Heros}[Ligatures=NoCommon]}
+
+% --- Couleurs (vert foncé du portfolio)
+\definecolor{ink}{HTML}{1B2922}
+\definecolor{accent}{HTML}{2F5A44}
+\definecolor{muted}{HTML}{55685D}
+\definecolor{rule}{HTML}{B8C6BD}
+
+\hypersetup{pdftitle={CV - Etienne Pouille},pdfauthor={Etienne Pouille},
+            pdfsubject={CV - Stage IA / MLOps / Edge AI / DevOps}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\AtBeginDocument{\color{ink}}
+\setlist[itemize]{leftmargin=1em,itemsep=1.5pt,topsep=2pt,parsep=0pt,label={•}}
+\linespread{1.16}
+
+% --- Macros
+% Titre de section : petit, majuscules, filet discret
+\newcommand{\sect}[1]{\par\vspace{13pt}%
+  {\bfseries\color{accent}\small\addfontfeature{LetterSpace=5}\MakeUppercase{#1}}\par\vspace{-2pt}%
+  {\color{rule}\rule{\linewidth}{0.4pt}}\par\vspace{4pt}}
+% Ligne « titre – précision ........ date »
+\newcommand{\entry}[3]{\par\noindent{\bfseries #1}{\color{muted}\;·\; #2}\hfill{\color{muted}#3}\par\nopagebreak}
+% Projet : nom en gras puis une phrase
+\newcommand{\projet}[2]{\par\vspace{4.5pt}\noindent{\bfseries #1}{\color{muted}\;–}\;#2\par}
+\newcommand{\skill}[2]{\par\noindent{\bfseries #1}~:\;{\color{muted}#2}\par}
+
+\begin{document}
+
+% --- En-tête (centré)
+\begingroup\centering
+\ifdefined\cible
+  {\bfseries\color{accent}\fontsize{21}{24}\selectfont \cible\par}
+  \vspace{3pt}
+  {\bfseries\large Etienne POUILLE}\par
+  \vspace{1pt}
+  {\color{muted}Étudiant en 3e année à EPITECH Lille · stage du 29 mars au 27 août 2027 · Nord de la France}\par
+\else
+  {\bfseries\color{accent}\fontsize{24}{27}\selectfont Etienne POUILLE\par}
+  \vspace{3pt}
+  {\large Étudiant en 3e année à EPITECH Lille}\par
+  \vspace{1pt}
+  {\color{muted}AI Engineer · MLOps · Edge AI · DevOps\; —\; stage du 29 mars au 27 août 2027 · Nord de la France}\par
+\fi
+\vspace{5pt}
+{\small
+\href{https://etienne-pouille.work}{\bfseries\color{accent}Portfolio : etienne-pouille.work}{\color{muted}\; · \;\href{mailto:contact@etienne-pouille.work}{contact@etienne-pouille.work} · 06~24~37~79~40}\par}
+\endgroup
+
+\vspace{9pt}
+Je construis des systèmes d’IA et l’infrastructure qui les fait tourner : agents et LLM locaux (Ollama),
+IA embarquée sur voiture autonome, pipelines CI/CD.
+
+% --- Expérience
+\sect{Expérience}
+\entry{Stage Ingénieur SysOps / DevOps}{Cyllene}{sept. – déc. 2025}
+\begin{itemize}
+  \item Outil Python de génération et de visualisation automatiques des infrastructures clients,
+        développé en autonomie et intégré aux pipelines GitLab CI/CD.
+  \item Utilisé pour faciliter les échanges techniques avec les clients et les équipes comptabilité et développement.
+\end{itemize}
+
+% --- Projets
+\sect{Projets}
+\projet{Noctia}{Plugin Claude Code : règles de développement et modes de travail (l’IA en mentor, ou en autonomie avec orchestrateur et sous-agents).}
+\projet{ALF}{Moteur agentique en Python connecté aux APIs Ollama, avec interface en ligne de commande.}
+\projet{Tri d’e-mails}{Tri automatique par LLM local (API Ollama) avec n8n, déployé sur VPS personnel.}
+\projet{RoboCar}{Voiture quasi-autonome (EPITECH, équipe de 5) : suivi de ligne blanche, puis LiDAR et caméra 3D pour une conduite autonome en tout environnement.}
+\projet{MyTorch}{Réseau de neurones recodé from scratch, appliqué au jeu d’échecs (EPITECH, en cours).}
+\projet{StartTrek}{Reinforcement Learning pour l’alunissage autonome d’un module spatial simulé (EPITECH).}
+
+% --- Compétences
+\sect{Compétences}
+\skill{IA et MLOps}{Python, Ollama (LLM locaux), agents, Claude Code, Reinforcement Learning}
+\vspace{2pt}
+\skill{DevOps}{Linux, Docker, GitLab CI/CD, GitHub Actions, Jenkins, Tailscale, n8n, Kubernetes (en apprentissage)}
+\vspace{2pt}
+\skill{Systèmes}{C, Rust, C++, Haskell, Bash}
+\vspace{2pt}
+\skill{Web}{React, JavaScript, HTML/CSS}
+
+% --- Formation
+\sect{Formation}
+\entry{EPITECH Lille}{Programme Grande École en informatique, 5 ans}{2024 – présent}
+{\color{muted}1re et 2e années validées avec les félicitations · spécialisation visée : IA, Maths, DevOps\\
+Badge Google DeepMind « AI Research Foundations » (en cours)\par}
+\vspace{4pt}
+\entry{Baccalauréat Général, mention Bien}{Lycée Notre-Dame des Dunes, Dunkerque}{2021 – 2024}
+{\color{muted}Section européenne anglais · spécialités NSI, Mathématiques, Maths expertes\par}
+
+% --- Langues et intérêts
+\sect{Langues et centres d’intérêt}
+Français (natif) · Anglais B2–C1 (TEPitech/TOEIC 910, Cambridge FIRST) · Espagnol A2\par
+\vspace{2pt}
+{\color{muted}Escalade, callisthénie, sport automobile, musique, dessin\par}
+\vspace{2pt}
+{\color{muted}Séjours : Chicago et Mexico (familles d’accueil, 2022-2023), New York (2024), Londres, Paris, Bruxelles\par}
+
+\end{document}

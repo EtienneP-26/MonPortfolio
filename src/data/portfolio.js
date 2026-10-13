@@ -5,7 +5,7 @@
 
 // --- Assets : Profil ---
 import profileImg from '../assets/Profil.png'
-import CV from '../assets/CV_Etienne_POUILLE.pdf'
+import CV from '../assets/CV/CV_Etienne_POUILLE.pdf'
 
 // --- Assets : Logos ---
 import epitechLogo from '../assets/logos/EPI-LOGO-2023-BLANC.png'
