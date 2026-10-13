@@ -87,24 +87,21 @@ const Profil = () => {
             {profileData.statuses.map((s, i) => {
               const StatusTag = s.href ? 'a' : 'div'
               return (
-                <React.Fragment key={i}>
-                  {i > 0 && <div className="status-divider" />}
-                  <StatusTag className="status-item" href={s.href}>
-                    {s.icon && (
-                      <span className="status-icon">
-                        {s.icon === 'active-dot' ? (
-                          <span className="status-dot-active" />
-                        ) : (
-                          s.icon
-                        )}
-                      </span>
-                    )}
-                    <div className="status-text">
-                      <strong>{s.title}</strong>
-                      {s.subtitle && <span>{s.subtitle}</span>}
-                    </div>
-                  </StatusTag>
-                </React.Fragment>
+                <StatusTag key={i} className="status-item" href={s.href}>
+                  {s.icon && (
+                    <span className="status-icon">
+                      {s.icon === 'active-dot' ? (
+                        <span className="status-dot-active" />
+                      ) : (
+                        s.icon
+                      )}
+                    </span>
+                  )}
+                  <div className="status-text">
+                    <strong>{s.title}</strong>
+                    {s.subtitle && <span>{s.subtitle}</span>}
+                  </div>
+                </StatusTag>
               )
             })}
           </motion.div>

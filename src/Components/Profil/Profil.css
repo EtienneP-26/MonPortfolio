@@ -111,7 +111,10 @@
 
 /* Status bar */
 .status-bar {
-  display: flex;
+  /* Colonnes de même largeur, quel que soit le texte de chaque statut */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   align-items: center;
   gap: 1.5rem;
   background: var(--surface);
@@ -119,21 +122,19 @@
   padding: 1rem 1.8rem;
   border-radius: 100px;
   margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .status-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   text-align: left;
 }
 
-.status-divider {
-  width: 1px;
-  height: 36px;
-  background: var(--border);
+.status-item + .status-item {
+  border-left: 1px solid var(--border);
+  padding-left: 1.5rem;
 }
 
 .status-icon {
@@ -246,15 +247,21 @@ a.status-item:hover strong {
   }
 
   .status-bar {
-    flex-direction: column;
+    grid-auto-flow: row;
+    gap: 1rem;
     border-radius: var(--radius-xl);
     padding: 1.2rem 1.4rem;
-    align-items: flex-start;
   }
 
-  .status-divider {
-    width: 100%;
-    height: 1px;
+  .status-item {
+    justify-content: flex-start;
+  }
+
+  .status-item + .status-item {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
   }
 
   .hero-actions {

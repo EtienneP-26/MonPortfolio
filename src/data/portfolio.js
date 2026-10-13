@@ -72,6 +72,7 @@ Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage IA / MLOps / 
   statuses: [
     {
       title: 'En recherche de stage',
+      subtitle: '29/03/27 - 27/08/27',
       href: '#stage',
     },
     {
