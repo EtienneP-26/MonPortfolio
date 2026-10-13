@@ -257,4 +257,9 @@
     min-width: 270px;
     max-width: 270px;
   }
+
+  /* Sur téléphone, on fait défiler au doigt : pas de flèches */
+  .nav-btn {
+    display: none;
+  }
 }

@@ -75,7 +75,6 @@ Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage IA / MLOps / 
       href: '#stage',
     },
     {
-      icon: 'active-dot',
       title: 'Freelance',
       subtitle: 'Automatisation IA',
     },
