@@ -1,5 +1,5 @@
 /* ========================================
-   SIDEBAR — Droite, icônes uniquement
+   SIDEBAR - Droite, icônes uniquement
    ======================================== */
 .sidebar {
   position: fixed;
@@ -161,7 +161,7 @@
 }
 
 /* ========================================
-   MOBILE — Sidebar masquée < 900px
+   MOBILE - Sidebar masquée < 900px
    ======================================== */
 @media (max-width: 900px) {
   .sidebar {

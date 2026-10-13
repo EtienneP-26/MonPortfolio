@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Couleur visible au rebond du scroll : prolonge le footer */
+  background: var(--surface-dark);
 }
 
 body {

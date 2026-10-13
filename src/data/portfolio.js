@@ -1,5 +1,5 @@
 // ============================================================
-//  portfolio.js — Source de données unique du portfolio
+//  portfolio.js - Source de données unique du portfolio
 //  Pour mettre à jour le portfolio, modifiez uniquement ce fichier.
 // ============================================================
 
@@ -62,9 +62,9 @@ export const profileData = {
   name: 'Etienne POUILLE',
   photo: profileImg,
   cv: CV,
-  subtitle: 'ÉTUDIANT EPITECH - DevOps · MLOps · IA Engineer · Edge AI · FDE',
-  bio: `Étudiant en 3ème année à EPITECH Lille, je construis des infrastructures et des systèmes d'IA : pipelines CI/CD, LLM locaux avec Ollama, IA embarquée sur voiture autonome.
-Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage DevOps / MLOps / Edge AI du 29 mars au 27 août 2027, dans le Nord de la France.`,
+  subtitle: 'ÉTUDIANT EPITECH - AI Engineer · MLOps · Edge AI · DevOps · FDE',
+  bio: `Étudiant en 3ème année à EPITECH Lille, je construis des systèmes d'IA et l'infrastructure qui les fait tourner : LLM locaux avec Ollama, IA embarquée sur voiture autonome, pipelines CI/CD.
+Ancien stagiaire SysOps / DevOps chez Cyllene, je cherche un stage IA / MLOps / Edge AI / DevOps du 29 mars au 27 août 2027, dans le Nord de la France.`,
   interests: "Centres d'intérêt : sport (automobile, escalade, callisthénie), sciences, musique, dessin.",
   github: 'https://github.com/EtienneP-26',
   linkedin: 'https://www.linkedin.com/in/etienne-pouille-8b7814349/',
@@ -103,8 +103,8 @@ export const stagesData = [
       "Cette période correspond à une immersion complète en entreprise, idéale pour un projet ambitieux et une réelle intégration dans les équipes.",
     ],
     details: [
-      { label: 'Domaine', value: 'DevOps, MLOps, IA, Edge AI' },
-      { label: 'Localisation', value: `${stageAvailability.region} (${stageAvailability.cities}) — ${stageAvailability.remote}` },
+      { label: 'Domaine', value: 'IA, MLOps, Edge AI, DevOps' },
+      { label: 'Localisation', value: `${stageAvailability.region} (${stageAvailability.cities}) - ${stageAvailability.remote}` },
       { label: 'Rythme', value: '5 jours/semaine - temps plein' },
       { label: 'Type de contrat', value: 'Stage / CDD / CDI' },
     ],
@@ -123,7 +123,7 @@ export const parcoursData = [
     place: 'Lille',
     imageplace: 'EPITECH',
     logo: epitechLogo,
-    description: `Année <strong>en cours</strong>.<br/>Spécialisation visée : <strong>IA</strong> (principale), Maths & DevOps (secondaires).<br/>En cours : badge Google DeepMind — <em>AI Research Foundations</em>.<br/>Projets en cours :<br/>&emsp;- MyTorch : réseau de neurones recodé from scratch, utilisé pour jouer aux échecs.<br/>&emsp;- Bernstein : conception d'une infrastructure Kubernetes (module DevOps).<br/>&emsp;- IA Sensai : IA en ligne de commande, dans la veine d'ALF-CLI.<br/>&emsp;- Cryptographie : réimplémentation de XOR, AES, RSA et PGP.`,
+    description: `Année <strong>en cours</strong>.<br/>Spécialisation visée : <strong>IA</strong> (principale), Maths & DevOps (secondaires).<br/>En cours : badge Google DeepMind - <em>AI Research Foundations</em>.<br/>Projets en cours :<br/>&emsp;- MyTorch : réseau de neurones recodé from scratch, utilisé pour jouer aux échecs.<br/>&emsp;- Sensai : IA en ligne de commande, dans la veine d'ALF-CLI<br/>&emsp;- Bernstein : conception d'une infrastructure Kubernetes (module DevOps)..<br/>&emsp;- Cryptographie : réimplémentation de XOR, AES, RSA et PGP.`,
     tags: ['IA', 'Maths', 'DevOps'],
   },
   {
@@ -271,7 +271,7 @@ export const projectsData = [
     description: "Plugin Claude Code pour faciliter le développement avec l'IA : règles de dev et modes de travail (l'IA comme mentor, ou en autonomie avec orchestrateur et sous-agents), plus des mods Claude Code. Inclut des garde-fous (hook git, scan des manques d'un projet, audit).",
     tags: ['IA', 'Claude Code', 'Agents'],
     status: 'en-cours',
-    statusLabel: 'En cours — Perso',
+    statusLabel: 'En cours - Perso',
     repo: 'https://github.com/EtienneP-26/Noctia',
   },
   {
@@ -281,7 +281,7 @@ export const projectsData = [
     description: "Moteur agentique perso (ALF) connecté aux APIs Ollama. Sous-composants : ALF-CLI (interface ligne de commande), ALF-UI (interface web, à venir).",
     tags: ['IA', 'Python', 'API'],
     status: 'en-cours',
-    statusLabel: 'En cours',
+    statusLabel: 'En cours - Perso',
     repo: 'https://github.com/EtienneP-26/ALF.git',
   },
   {
@@ -301,7 +301,7 @@ export const projectsData = [
     description: "Voiture quasi-autonome sur circuit (v1 : suivi d'une ligne blanche). En v2 (2026), ajout d'un LiDAR et d'une caméra 3D pour viser une conduite autonome dans tout type d'environnement. Rôle : construction physique et algorithmes embarqués.",
     tags: ['IA', 'Python', 'Câblage', 'Robotique'],
     status: 'en-cours',
-    statusLabel: 'En cours (v2) — EPITECH',
+    statusLabel: 'En cours (v2) - EPITECH',
     repo: null,
   },
   // {
@@ -310,7 +310,7 @@ export const projectsData = [
   //   description: "Projet du module DevOps : conception d'une infrastructure Kubernetes.",
   //   tags: ['DevOps', 'Kubernetes'],
   //   status: 'en-cours',
-  //   statusLabel: 'En cours — EPITECH',
+  //   statusLabel: 'En cours - EPITECH',
   //   repo: null,
   // },
   {
@@ -320,7 +320,7 @@ export const projectsData = [
     description: "Réseau de neurones recodé from scratch, utilisé ensuite pour jouer aux échecs.",
     tags: ['IA', 'Deep Learning'],
     status: 'en-cours',
-    statusLabel: 'En cours — EPITECH',
+    statusLabel: 'En cours - EPITECH',
     repo: null,
   },
   {
@@ -330,7 +330,7 @@ export const projectsData = [
     description: "Application de dessin pour Linux, écrite en Rust, avec support de tablette graphique. Née d'un projet EPITECH (recoder GIMP), réorientée vers le dessin.",
     tags: ['Rust', 'Linux', 'Graphisme'],
     status: 'en-cours',
-    statusLabel: 'En cours — Perso & EPITECH',
+    statusLabel: 'En cours - Perso & EPITECH',
     repo: 'https://github.com/EtienneP-26/RIMP',
   },
   // {
@@ -339,7 +339,7 @@ export const projectsData = [
   //   description: "Projet EPITECH d'IA en ligne de commande, dans la même veine qu'ALF-CLI.",
   //   tags: ['IA', 'Python'],
   //   status: 'en-cours',
-  //   statusLabel: 'En cours — EPITECH',
+  //   statusLabel: 'En cours - EPITECH',
   //   repo: null,
   // },
   // {
@@ -348,7 +348,7 @@ export const projectsData = [
   //   description: "Réimplémentation d'algorithmes de cryptographie : XOR, AES, RSA et PGP.",
   //   tags: ['Cryptographie'],
   //   status: 'en-cours',
-  //   statusLabel: 'En cours — EPITECH',
+  //   statusLabel: 'En cours - EPITECH',
   //   repo: null,
   // },
   {
@@ -357,16 +357,16 @@ export const projectsData = [
     description: "Modèle de Reinforcement Learning pour l'alunissage autonome d'un module spatial simulé.",
     tags: ['IA', 'Python', 'Reinforcement Learning'],
     status: 'termine',
-    statusLabel: 'Terminé — EPITECH',
+    statusLabel: 'Terminé - EPITECH',
     repo: null,
   },
   {
     title: 'MinIA',
     image: imgMinIA,
-    description: "Réimplémentation d'un petit LLM. Prochaine étape à définir — piste envisagée : extension vers le multimodal (texte → image).",
+    description: "Réimplémentation d'un petit LLM. Prochaine étape à définir - piste envisagée : extension vers le multimodal (texte → image).",
     tags: ['Python', 'AI', 'Maths'],
     status: 'en-exploration',
-    statusLabel: 'En exploration — Perso',
+    statusLabel: 'En exploration - Perso',
     repo: 'https://github.com/EtienneP-26/MinIA',
   },
   {
@@ -375,7 +375,7 @@ export const projectsData = [
     description: "Clustering non supervisé (8 groupes distincts) sur une base de symptômes patients + détection de tumeurs cérébrales par imagerie/NLP (partie réalisée par un coéquipier).",
     tags: ['IA', 'Python', 'Supervised', 'Unsupervised'],
     status: 'termine',
-    statusLabel: 'Terminé — EPITECH',
+    statusLabel: 'Terminé - EPITECH',
     repo: null,
   },
   {
@@ -384,7 +384,7 @@ export const projectsData = [
     description: "Doom-like en C avec CSFML (raycasting, 2.5D). Projet d'équipe Tek1.",
     tags: ['C', 'CSFML', 'Game Engine'],
     status: 'termine',
-    statusLabel: 'Terminé — EPITECH',
+    statusLabel: 'Terminé - EPITECH',
     repo: 'https://github.com/EtienneP-26/My-DOOM-FPS',
   },
   {
@@ -393,7 +393,7 @@ export const projectsData = [
     description: "Réimplémentation d'un shell Unix (parsing, redirections, pipes, builtins) en C, en plusieurs étapes individuelles puis en équipe.",
     tags: ['C', 'Unix', 'System'],
     status: 'termine',
-    statusLabel: 'Terminé — EPITECH',
+    statusLabel: 'Terminé - EPITECH',
     repo: 'https://github.com/EtienneP-26/mysh',
   },
   {
@@ -425,13 +425,13 @@ export const projectsData = [
   //   description: "Réimplémentation des fondamentaux de PyTorch (tenseurs, autograd) en Python puis en Rust.",
   //   tags: ['Python', 'Rust', 'Machine Learning'],
   //   status: 'en-cours',
-  //   statusLabel: 'En cours — EPITECH',
+  //   statusLabel: 'En cours - EPITECH',
   //   repo: null,
   // },
 ]
 
 // ============================================================
-//  SECTION ROADMAP — Prochainement
+//  SECTION ROADMAP - Prochainement
 // ============================================================
 export const roadmapData = [
   'Fine-tuning de modèles LLM (expérimentations)',

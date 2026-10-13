@@ -36,7 +36,7 @@ const SkillItem = ({ skill }) => {
   return (
     <div
       className={`bento-logo-item${isLearning ? ' learning' : ''}`}
-      title={`${skill.name} — ${levelLabel}`}
+      title={`${skill.name} - ${levelLabel}`}
     >
       <span className={`skill-badge level-${skill.level}`} aria-hidden="true" />
       {skill.img ? (
@@ -69,7 +69,7 @@ const About = () => {
         {/* ── BENTO GRID ── */}
         <div className="bento-grid">
 
-          {/* Cartes — Catégories techniques (2×2) */}
+          {/* Cartes - Catégories techniques (2×2) */}
           {skillsData.categories.map((category) => (
             <motion.div
               key={category.title}
@@ -90,7 +90,7 @@ const About = () => {
             </motion.div>
           ))}
 
-          {/* Carte — Soft Skills */}
+          {/* Carte - Soft Skills */}
           <motion.div
             className="bento-card bento-card-dark bento-full"
             variants={fadeIn}
@@ -111,7 +111,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Carte 4 — Langues (full width) */}
+          {/* Carte 4 - Langues (full width) */}
           <motion.div
             className="bento-card bento-full"
             variants={fadeIn}
