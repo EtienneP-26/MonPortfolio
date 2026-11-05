@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Essais locaux (Docker, DA)
+TestUpdate/
