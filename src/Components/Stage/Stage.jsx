@@ -18,8 +18,7 @@ const Stage = () => {
       >
         <h2 className="section-title">Recherche de Stage</h2>
         <p className="stage-intro">
-          Je recherche <strong>deux stages</strong> dans le cadre de ma 3ème année à EPITECH Lille.<br />
-          Sélectionnez un type de stage pour en voir les détails.
+          Je recherche <strong>un stage</strong> dans le cadre de ma 3ème année à EPITECH Lille.
         </p>
 
         {/* ── 2 encarts côte à côte ── */}

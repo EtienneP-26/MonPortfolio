@@ -100,7 +100,7 @@ export const stagesData = [
     type: 'Stage Temps Plein',
     badge: '5 jours/semaine',
     period: `${stageAvailability.start} ${stageAvailability.year} → ${stageAvailability.end} ${stageAvailability.year}`,
-    duration: '4-5 mois',
+    duration: '5 mois',
     context: [
       "En fin de 3ème année, je serai disponible à temps plein pour un stage conventionnel.",
       "Cette période correspond à une immersion complète en entreprise, idéale pour un projet ambitieux et une réelle intégration dans les équipes.",
