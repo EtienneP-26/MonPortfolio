@@ -90,7 +90,7 @@ export const stageAvailability = {
   end: '27 août',
   year: '2027',
   region: 'Nord',
-  cities: 'Dunkerque, Calais, Lille et ses alentours',
+  cities: 'Dunkerque, Calais, Métropole lilloise',
   remote: 'télétravail toléré',
 }
 
